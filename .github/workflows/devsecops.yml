@@ -1,0 +1,73 @@
+
+name: ROTA LIVRE - DevSecOps
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gitleaks:
+    name: Gitleaks - Segredos
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Verificar segredos
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  semgrep:
+    name: Semgrep - Analise de codigo
+    runs-on: ubuntu-24.04
+
+    container:
+      image: semgrep/semgrep
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v6
+
+      - name: Analisar seguranca
+        run: semgrep scan --config auto --error ROTA-LIVRE/backend ROTA-LIVRE/frontend/src
+
+  build-trivy:
+    name: Docker Build e Trivy
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v6
+
+      - name: Validar Docker Compose
+        run: docker compose -f ROTA-LIVRE/compose.yaml config --quiet
+
+      - name: Construir imagem da API
+        run: docker build -t rota-livre-api:ci ./ROTA-LIVRE/backend
+
+      - name: Construir imagem do frontend
+        run: docker build -t rota-livre-frontend:ci ./ROTA-LIVRE/frontend
+
+      - name: Trivy - Analisar API
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: rota-livre-api:ci
+          format: table
+          exit-code: '1'
+          severity: CRITICAL,HIGH
+
+      - name: Trivy - Analisar frontend
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: rota-livre-frontend:ci
+          format: table
+          exit-code: '1'
+          severity: CRITICAL,HIGH
