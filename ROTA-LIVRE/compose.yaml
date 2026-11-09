@@ -1,0 +1,46 @@
+
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: rota-livre-api:1.0
+    restart: unless-stopped
+    init: true
+    environment:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp
+    expose:
+      - "8000"
+    networks:
+      - rota-livre-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: rota-livre-frontend:1.0
+    restart: unless-stopped
+    init: true
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      api:
+        condition: service_healthy
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    networks:
+      - rota-livre-network
+
+networks:
+  rota-livre-network:
+    driver: bridge
