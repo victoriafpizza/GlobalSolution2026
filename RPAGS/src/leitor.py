@@ -102,4 +102,11 @@ def carregar_registros(config):
         LOGGER.error("Falha na API. %s", erro)
         LOGGER.warning("Usando arquivo local de contingência após falha da API.")
         return ler_arquivo(config.contingencia), "contingencia"
+    if config.adaptador_mvp:
+        # A API do MVP fornece o tipo, mas não possui um campo de descrição.
+        registros = [
+            {"descricao": "Descrição não fornecida pela API do MVP.", **registro}
+            if isinstance(registro, dict) else registro
+            for registro in registros
+        ]
     return registros, "api"

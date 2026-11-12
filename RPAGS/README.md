@@ -108,9 +108,31 @@ Invoke-RestMethod 'http://127.0.0.1:8000/rpa/resumo' | ConvertTo-Json -Depth 8
 
 Os endpoints retornam HTTP `200` com o relatório disponível, `404` quando nenhum relatório existe e `503` quando os relatórios estão inacessíveis ou nenhum candidato é válido. A consulta de obstáculos inclui ID, tipo, coordenadas, prioridade e `status_triagem`. Ambas incluem os totais por prioridade. A [resposta HTTP registrada](evidencias/09_saida_integracao.json) mostra o contrato efetivamente testado.
 
-### Instalação futura no MVP
+### Integração com o backend do MVP
 
-O roteador é reutilizável via `criar_roteador(pasta)` e `app.include_router(...)`. O MVP e o PDD estavam indisponíveis no workspace. A instalação no backend principal depende de conferir conflitos de rota, alinhar o contrato com o mapa e disponibilizar ao backend um diretório de relatórios configurado pelo servidor. A leitura dos relatórios deve usar uma conta com acesso somente de leitura, e a escrita deve ficar restrita ao robô.
+No repositório principal, o backend registra o roteador quando `RPA_RELATORIOS_DIR` aponta para o diretório de saída do robô. A rota existente `/api/obstacles` retorna um objeto com a lista `obstaculos`. O adaptador explícito `--adaptador-mvp` lê essa lista e registra uma indicação de ausência quando a API omite `descricao`. Os demais campos continuam sujeitos às regras de validação do robô. A integração foi testada no backend real executado localmente.
+
+A partir da raiz do repositório principal, prepare e inicie o backend:
+
+```powershell
+python -m venv .venv
+$py = (Resolve-Path .\.venv\Scripts\python.exe).Path
+& $py -m pip install -r .\ROTA-LIVRE\backend\requirements.txt
+$env:PYTHONPATH = (Resolve-Path .\RPAGS).Path
+$env:RPA_RELATORIOS_DIR = (Resolve-Path .\RPAGS\dados\saida).Path
+& $py -m uvicorn main:app --app-dir .\ROTA-LIVRE\backend --host 127.0.0.1 --port 8000
+```
+
+Em outro PowerShell, na mesma raiz:
+
+```powershell
+& .\.venv\Scripts\python.exe .\RPAGS\main.py --api-url http://127.0.0.1:8000/api/obstacles --adaptador-mvp
+Invoke-RestMethod 'http://127.0.0.1:8000/api/obstacles'
+Invoke-RestMethod 'http://127.0.0.1:8000/rpa/obstaculos-processados' | ConvertTo-Json -Depth 8
+Invoke-RestMethod 'http://127.0.0.1:8000/rpa/resumo'
+```
+
+Para verificar a configuração Docker, execute na raiz `docker compose -f ROTA-LIVRE/compose.yaml -f RPAGS/integracao_backend/compose.rpa.yaml config --quiet`. O override monta o código Python e o diretório de relatórios em modo somente leitura. O usuário do contêiner precisa ter permissão de leitura dos relatórios. A configuração base mantém a API em loopback e o proxy do mapa encaminha as rotas sob `/api/`.
 
 A aplicação de exemplo foi projetada para loopback. Antes de publicar os endpoints, o backend precisa aplicar sua autenticação e autorização ao roteador, revisar a exposição de IDs, tipos e coordenadas e servir o tráfego por HTTPS. Os endpoints usam campos selecionados e mantêm descrições, erros individuais e caminhos internos no ambiente local. A documentação do roteador segue o [guia oficial de aplicações FastAPI](https://fastapi.tiangolo.com/tutorial/bigger-applications/).
 

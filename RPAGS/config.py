@@ -20,6 +20,8 @@ def ler_configuracao():
     origem.add_argument("--api-url", help="URL HTTP(S) de consulta.")
     parser.add_argument("--chave-lista", default=os.getenv("ROTA_CHAVE_LISTA"),
                         help="Chave de primeiro nível que contém a lista da API.")
+    parser.add_argument("--adaptador-mvp", action="store_true",
+                        help="Adapta a resposta de /api/obstacles do MVP.")
     parser.add_argument("--contingencia", type=Path, default=os.getenv("ROTA_CONTINGENCIA") or None,
                         help="Arquivo local autorizado para falhas na API.")
     parser.add_argument("--timeout", type=float, default=os.getenv("ROTA_TIMEOUT", "5"),
@@ -47,6 +49,10 @@ def ler_configuracao():
             url_valida = False
         if not url_valida:
             parser.error("Informe uma URL HTTP(S) válida, sem credenciais embutidas.")
+    if config.adaptador_mvp:
+        if not config.api_url:
+            parser.error("O adaptador do MVP requer uma origem de API.")
+        config.chave_lista = config.chave_lista or "obstaculos"
 
     if not math.isfinite(config.timeout) or config.timeout <= 0:
         parser.error("O timeout deve ser finito e maior que zero.")

@@ -1,0 +1,173 @@
+{
+  "origem_sem_rpa": {
+    "rota": "/api/obstacles",
+    "status_http": 200,
+    "corpo": {
+      "total": 2,
+      "obstaculos": [
+        {
+          "id": 1,
+          "tipo": "Calçada danificada",
+          "latitude": -23.5505,
+          "longitude": -46.6333,
+          "status": "Pendente"
+        },
+        {
+          "id": 2,
+          "tipo": "Rampa bloqueada",
+          "latitude": -23.551,
+          "longitude": -46.634,
+          "status": "Em análise"
+        }
+      ]
+    }
+  },
+  "rpa_desabilitado": {
+    "rota": "/rpa/resumo",
+    "status_http": 404,
+    "corpo": {
+      "detail": "Not Found"
+    }
+  },
+  "rota_citada_no_pdd": {
+    "rota": "/obstaculos",
+    "status_http": 404,
+    "corpo": {
+      "detail": "Not Found"
+    }
+  },
+  "origem_com_rpa": {
+    "rota": "/api/obstacles",
+    "status_http": 200,
+    "corpo": {
+      "total": 2,
+      "obstaculos": [
+        {
+          "id": 1,
+          "tipo": "Calçada danificada",
+          "latitude": -23.5505,
+          "longitude": -46.6333,
+          "status": "Pendente"
+        },
+        {
+          "id": 2,
+          "tipo": "Rampa bloqueada",
+          "latitude": -23.551,
+          "longitude": -46.634,
+          "status": "Em análise"
+        }
+      ]
+    }
+  },
+  "obstaculos_sem_relatorio": {
+    "rota": "/rpa/obstaculos-processados",
+    "status_http": 404,
+    "corpo": {
+      "detail": "Nenhum relatório de triagem disponível."
+    }
+  },
+  "resumo_sem_relatorio": {
+    "rota": "/rpa/resumo",
+    "status_http": 404,
+    "corpo": {
+      "detail": "Nenhum relatório de triagem disponível."
+    }
+  },
+  "obstaculos_corrompido": {
+    "rota": "/rpa/obstaculos-processados",
+    "status_http": 503,
+    "corpo": {
+      "detail": "Nenhum relatório de triagem válido está disponível."
+    }
+  },
+  "resumo_corrompido": {
+    "rota": "/rpa/resumo",
+    "status_http": 503,
+    "corpo": {
+      "detail": "Nenhum relatório de triagem válido está disponível."
+    }
+  },
+  "obstaculos_processados": {
+    "rota": "/rpa/obstaculos-processados",
+    "status_http": 200,
+    "corpo": {
+      "execucao_id": "1528fae32c344676a725d18a35ceb001",
+      "processado_em": "2026-11-12T18:55:08.010+00:00",
+      "origem": "api",
+      "situacao": "sucesso",
+      "resumo": {
+        "total": 2,
+        "validos": 2,
+        "invalidos": 0,
+        "duplicados": 0
+      },
+      "por_prioridade": {
+        "alta": 1,
+        "media": 1,
+        "baixa": 0
+      },
+      "obstaculos": [
+        {
+          "id": 1,
+          "tipo": "Calçada danificada",
+          "latitude": -23.5505,
+          "longitude": -46.6333,
+          "prioridade": "media",
+          "status_triagem": "processado"
+        },
+        {
+          "id": 2,
+          "tipo": "Rampa bloqueada",
+          "latitude": -23.551,
+          "longitude": -46.634,
+          "prioridade": "alta",
+          "status_triagem": "processado"
+        }
+      ]
+    }
+  },
+  "resumo": {
+    "rota": "/rpa/resumo",
+    "status_http": 200,
+    "corpo": {
+      "execucao_id": "1528fae32c344676a725d18a35ceb001",
+      "processado_em": "2026-11-12T18:55:08.010+00:00",
+      "origem": "api",
+      "situacao": "sucesso",
+      "resumo": {
+        "total": 2,
+        "validos": 2,
+        "invalidos": 0,
+        "duplicados": 0
+      },
+      "por_prioridade": {
+        "alta": 1,
+        "media": 1,
+        "baixa": 0
+      }
+    }
+  },
+  "proxy_do_frontend": {
+    "rota": "/api/obstacles",
+    "status_http": 200,
+    "corpo": {
+      "total": 2,
+      "obstaculos": [
+        {
+          "id": 1,
+          "tipo": "Calçada danificada",
+          "latitude": -23.5505,
+          "longitude": -46.6333,
+          "status": "Pendente"
+        },
+        {
+          "id": 2,
+          "tipo": "Rampa bloqueada",
+          "latitude": -23.551,
+          "longitude": -46.634,
+          "status": "Em análise"
+        }
+      ]
+    }
+  }
+}

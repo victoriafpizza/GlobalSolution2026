@@ -1,4 +1,6 @@
 
+import os
+
 from fastapi import FastAPI
 from fastapi.responses import Response
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
@@ -11,6 +13,11 @@ app = FastAPI(
     version="1.0.0"
 )
 app.add_middleware(HttpMetricsMiddleware)
+
+if pasta_relatorios := os.getenv("RPA_RELATORIOS_DIR"):
+    from integracao_backend.exemplo_fastapi import criar_roteador
+
+    app.include_router(criar_roteador(pasta_relatorios))
 
 
 @app.get("/metrics", include_in_schema=False)

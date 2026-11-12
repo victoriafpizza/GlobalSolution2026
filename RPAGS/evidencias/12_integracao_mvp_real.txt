@@ -1,0 +1,27 @@
+Integração com o backend real do repositório GlobalSolution2026
+Situação: APROVADO EM LOOPBACK
+O backend executado foi ROTA-LIVRE/backend/main.py com suas dependências declaradas.
+A rota original do código é /api/obstacles. A rota /obstaculos citada no enunciado retorna 404.
+O frontend manteve seu código e consultou a rota original pelo proxy Vite.
+
+Saídas reais da execução local
+GET http://127.0.0.1:59914/api/obstacles -> HTTP 200
+GET http://127.0.0.1:59914/rpa/resumo -> HTTP 404
+GET http://127.0.0.1:59914/obstaculos -> HTTP 404
+GET http://127.0.0.1:8000/api/obstacles -> HTTP 200
+GET http://127.0.0.1:8000/rpa/obstaculos-processados -> HTTP 404
+GET http://127.0.0.1:8000/rpa/resumo -> HTTP 404
+GET http://127.0.0.1:8000/rpa/obstaculos-processados -> HTTP 503
+GET http://127.0.0.1:8000/rpa/resumo -> HTTP 503
+Comando do robô (destinos temporários isolados por subprocesso)
+"C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe" -B -c "import sys; from pathlib import Path; import main; main.PASTA_SAIDA=Path(sys.argv.pop(1)); main.PASTA_LOGS=Path(sys.argv.pop(1)); raise SystemExit(main.main())" C:\Users\victo\AppData\Local\Temp\rota-mvp-apbkti26\relatorios C:\Users\victo\AppData\Local\Temp\rota-mvp-apbkti26\logs --api-url http://127.0.0.1:8000/api/obstacles --adaptador-mvp --timeout 3
+INFO Execução iniciada.
+INFO Origem dos dados: api. Relatório: C:\Users\victo\AppData\Local\Temp\rota-mvp-apbkti26\relatorios\resultado_7409281ea4904802bace1076fc656ee7.json
+INFO Execução finalizada. origem=api total=2 validos=2 invalidos=0 duplicados=0 erros=0 situacao=sucesso
+Código de saída: 0
+GET http://127.0.0.1:8000/rpa/obstaculos-processados -> HTTP 200
+GET http://127.0.0.1:8000/rpa/resumo -> HTTP 200
+Relatório, HTTP e log conferidos pelo ID 1528fae32c344676a725d18a35ceb001.
+Totais: {'total': 2, 'validos': 2, 'invalidos': 0, 'duplicados': 0}. Prioridades: {'alta': 1, 'media': 1, 'baixa': 0}.
+GET http://127.0.0.1:5173/api/obstacles -> HTTP 200
+Vite local serviu o HTML com o elemento root e o proxy /api/obstacles devolveu o contrato original.

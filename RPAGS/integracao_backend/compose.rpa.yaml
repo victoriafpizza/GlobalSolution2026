@@ -1,0 +1,30 @@
+services:
+  api:
+    environment:
+      PYTHONPATH: /opt/rpa
+      RPA_RELATORIOS_DIR: /var/lib/rota-livre/rpa
+    volumes:
+      - type: bind
+        source: ../RPAGS/config.py
+        target: /opt/rpa/config.py
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ../RPAGS/src
+        target: /opt/rpa/src
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ../RPAGS/integracao_backend
+        target: /opt/rpa/integracao_backend
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ../RPAGS/dados/saida
+        target: /var/lib/rota-livre/rpa
+        read_only: true
+        bind:
+          create_host_path: false

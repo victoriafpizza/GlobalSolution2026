@@ -1,0 +1,26 @@
+Regressão de integração da Etapa 4
+Comando: python -B -m unittest discover -s tests -v (na raiz RPAGS)
+test_api_indisponivel (test_etapa3.RegressaoEtapa3.test_api_indisponivel) ... ok
+test_execucoes_limpas_tem_ids_distintos_e_sucesso (test_etapa3.RegressaoEtapa3.test_execucoes_limpas_tem_ids_distintos_e_sucesso) ... ok
+test_ids_equivalentes_preservam_a_entrada (test_etapa3.RegressaoEtapa3.test_ids_equivalentes_preservam_a_entrada) ... ok
+test_json_malformado (test_etapa3.RegressaoEtapa3.test_json_malformado) ... ok
+test_latitude_invalida_no_meio_do_lote (test_etapa3.RegressaoEtapa3.test_latitude_invalida_no_meio_do_lote) ... ok
+test_leitor_e_endpoints_com_sucesso_e_falha (test_etapa3.RegressaoEtapa3.test_leitor_e_endpoints_com_sucesso_e_falha) ... ok
+test_lote_prioridades_invalidos_duplicidade_e_logs (test_etapa3.RegressaoEtapa3.test_lote_prioridades_invalidos_duplicidade_e_logs) ... ok
+test_rotacao_mantem_tres_copias (test_etapa3.RegressaoEtapa3.test_rotacao_mantem_tres_copias) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 21.393s
+
+OK
+Código de saída: 0
+Comando: python -B -m unittest -v test_metrics (no backend real)
+test_reports_fraction_only_with_finite_cgroup_limit (test_metrics.ContainerMemoryTests.test_reports_fraction_only_with_finite_cgroup_limit) ... ok
+test_unhandled_exception_is_counted_and_propagated (test_metrics.HttpMetricsTests.test_unhandled_exception_is_counted_and_propagated) ... ok
+test_unmatched_paths_and_custom_methods_use_bounded_labels (test_metrics.HttpMetricsTests.test_unmatched_paths_and_custom_methods_use_bounded_labels) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.182s
+
+OK
+Código de saída: 0
