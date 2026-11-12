@@ -1,11 +1,21 @@
 
 from fastapi import FastAPI
+from fastapi.responses import Response
+from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
+
+from metrics import REGISTRY, HttpMetricsMiddleware
 
 app = FastAPI(
     title="ROTA LIVRE API",
     description="API de mobilidade e acessibilidade urbana.",
     version="1.0.0"
 )
+app.add_middleware(HttpMetricsMiddleware)
+
+
+@app.get("/metrics", include_in_schema=False)
+def metrics():
+    return Response(generate_latest(REGISTRY), media_type=CONTENT_TYPE_LATEST)
 
 
 @app.get("/")

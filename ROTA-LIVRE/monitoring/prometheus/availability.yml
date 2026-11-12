@@ -1,0 +1,11 @@
+groups:
+  - name: rota-livre-availability
+    rules:
+      - alert: RotaLivreAPIScrapeUnavailable
+        expr: up{job="rota-livre-api"} == 0
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: Prometheus perdeu acesso às métricas da API ROTA LIVRE
+          description: A coleta falhou em {{ $labels.instance }} por pelo menos 30 segundos.

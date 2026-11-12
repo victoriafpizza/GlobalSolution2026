@@ -1,0 +1,10 @@
+[Unit]
+Description=Poll GitHub Actions for verified ROTA LIVRE releases
+
+[Timer]
+OnBootSec=30s
+OnUnitInactiveSec=30s
+AccuracySec=5s
+
+[Install]
+WantedBy=timers.target

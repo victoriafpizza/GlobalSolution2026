@@ -7,6 +7,7 @@ services:
     image: rota-livre-api:1.0
     restart: unless-stopped
     init: true
+    mem_limit: 256m
     environment:
       PYTHONDONTWRITEBYTECODE: "1"
       PYTHONUNBUFFERED: "1"
@@ -17,8 +18,8 @@ services:
     read_only: true
     tmpfs:
       - /tmp
-    expose:
-      - "8000"
+    ports:
+      - "127.0.0.1:${ROTA_LIVRE_METRICS_PORT:-9091}:8000"
     networks:
       - rota-livre-network
 

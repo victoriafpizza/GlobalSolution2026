@@ -11,7 +11,7 @@ RUN apk upgrade --no-cache \
     && python -m pip check \
     && python -m pip uninstall -y pip
 
-COPY main.py ./
+COPY main.py metrics.py ./
 USER 10001:10001
 
 EXPOSE 8000

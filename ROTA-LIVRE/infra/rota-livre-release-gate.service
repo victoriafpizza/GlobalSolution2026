@@ -1,0 +1,12 @@
+[Unit]
+Description=Deploy verified ROTA LIVRE releases from GitHub Actions
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/libexec/rota-livre-release-gate.py
+StateDirectory=rota-livre-release-gate
+UMask=0077
+TimeoutStartSec=23min

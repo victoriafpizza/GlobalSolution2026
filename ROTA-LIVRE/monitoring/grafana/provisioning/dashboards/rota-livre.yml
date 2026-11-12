@@ -1,0 +1,7 @@
+apiVersion: 1
+
+providers:
+  - name: rota-livre
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards

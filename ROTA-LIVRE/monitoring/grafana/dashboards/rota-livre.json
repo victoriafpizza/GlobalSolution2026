@@ -1,0 +1,98 @@
+{
+  "uid": "rota-livre-devsecops",
+  "title": "ROTA LIVRE — Observabilidade DevSecOps",
+  "description": "Métricas HTTP da API FastAPI e memória real do container coletadas pelo Prometheus.",
+  "tags": ["rota-livre", "devsecops"],
+  "schemaVersion": 39,
+  "version": 1,
+  "editable": false,
+  "timezone": "browser",
+  "time": { "from": "now-15m", "to": "now" },
+  "refresh": "10s",
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "Latência HTTP P95",
+      "description": "Percentil 95 da duração HTTP em janela móvel de 5 minutos.",
+      "datasource": { "type": "prometheus", "uid": "rota-livre-prometheus" },
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 9 },
+      "fieldConfig": {
+        "defaults": { "unit": "s", "min": 0, "color": { "mode": "palette-classic" } },
+        "overrides": []
+      },
+      "options": { "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull"] } },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95, sum by (le) (rate(rota_livre_http_request_duration_seconds_bucket{job=\"rota-livre-api\"}[5m])))",
+          "legendFormat": "P95"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Tráfego HTTP por rota",
+      "description": "Requisições por segundo agrupadas pelo método e pelo modelo da rota.",
+      "datasource": { "type": "prometheus", "uid": "rota-livre-prometheus" },
+      "gridPos": { "x": 12, "y": 0, "w": 12, "h": 9 },
+      "fieldConfig": {
+        "defaults": { "unit": "reqps", "min": 0, "color": { "mode": "palette-classic" } },
+        "overrides": []
+      },
+      "options": { "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull"] } },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (method, route) (rate(rota_livre_http_requests_total{job=\"rota-livre-api\"}[5m]))",
+          "legendFormat": "{{method}} {{route}}"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "Erros HTTP 5xx",
+      "description": "Respostas HTTP 5xx por segundo em janela móvel de 5 minutos.",
+      "datasource": { "type": "prometheus", "uid": "rota-livre-prometheus" },
+      "gridPos": { "x": 0, "y": 9, "w": 12, "h": 9 },
+      "fieldConfig": {
+        "defaults": { "unit": "reqps", "min": 0, "color": { "mode": "palette-classic" } },
+        "overrides": []
+      },
+      "options": { "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull"] } },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum(rate(rota_livre_http_requests_total{job=\"rota-livre-api\",status_class=\"5xx\"}[5m]))",
+          "legendFormat": "HTTP 5xx"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Saturação de memória do container",
+      "description": "Uso medido pelo cgroup da API dividido pelo limite de memória do mesmo cgroup.",
+      "datasource": { "type": "prometheus", "uid": "rota-livre-prometheus" },
+      "gridPos": { "x": 12, "y": 9, "w": 12, "h": 9 },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percentunit",
+          "min": 0,
+          "color": { "mode": "palette-classic" }
+        },
+        "overrides": []
+      },
+      "options": { "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull"] } },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rota_livre_container_memory_usage_ratio{job=\"rota-livre-api\"}",
+          "legendFormat": "Memória da API"
+        }
+      ]
+    }
+  ]
+}
