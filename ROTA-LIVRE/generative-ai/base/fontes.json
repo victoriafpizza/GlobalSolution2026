@@ -1,0 +1,41 @@
+[
+  {
+    "source_id": "lbi",
+    "titulo": "Lei nº 13.146/2015 — Lei Brasileira de Inclusão",
+    "instituicao": "Câmara dos Deputados — Legislação Informatizada",
+    "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf",
+    "tipo_documento": "lei federal",
+    "data_publicacao": "2015-07-07",
+    "data_acesso": "2026-11-12",
+    "licenca_ou_status_juridico": "Texto legal excluído da proteção autoral pelo art. 8º, IV, da Lei nº 9.610/1998.",
+    "permissao_reproducao": "Reutilização do texto legal decorre da exclusão legal. Licença aberta do portal: não verificado.",
+    "referencia": "Lei nº 13.146/2015 — Lei Brasileira de Inclusão — versão consolidada",
+    "observacoes": "PDF consolidado. A página do Planalto apresentou bloqueio automatizado."
+  },
+  {
+    "source_id": "ace",
+    "titulo": "Lei nº 10.098/2000 — Lei da Acessibilidade",
+    "instituicao": "Câmara dos Deputados — Legislação Informatizada",
+    "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html",
+    "tipo_documento": "lei federal",
+    "data_publicacao": "2000-12-20",
+    "data_acesso": "2026-11-12",
+    "licenca_ou_status_juridico": "Texto legal excluído da proteção autoral pelo art. 8º, IV, da Lei nº 9.610/1998.",
+    "permissao_reproducao": "Reutilização do texto legal decorre da exclusão legal. Licença aberta do portal: não verificado.",
+    "referencia": "Lei nº 10.098/2000 — Lei da Acessibilidade — versão consolidada",
+    "observacoes": "HTML consolidado. O Planalto também foi consultado e exibiu caracteres corrompidos na extração."
+  },
+  {
+    "source_id": "pnmu",
+    "titulo": "Lei nº 12.587/2012 — Política Nacional de Mobilidade Urbana",
+    "instituicao": "Câmara dos Deputados — Legislação Informatizada",
+    "url": "https://www2.camara.leg.br/legin/fed/lei/2012/lei-12587-3-janeiro-2012-612248-normaatualizada-pl.html",
+    "tipo_documento": "lei federal",
+    "data_publicacao": "2012-01-04",
+    "data_acesso": "2026-11-12",
+    "licenca_ou_status_juridico": "Texto legal excluído da proteção autoral pelo art. 8º, IV, da Lei nº 9.610/1998.",
+    "permissao_reproducao": "Reutilização do texto legal decorre da exclusão legal. Licença aberta do portal: não verificado.",
+    "referencia": "Lei nº 12.587/2012 — Política Nacional de Mobilidade Urbana — versão consolidada. Publicação original: DOU, seção 1, 04/01/2012, p. 1. https://www2.camara.leg.br/legin/fed/lei/2012/lei-12587-3-janeiro-2012-612248-norma-pl.html",
+    "observacoes": "HTML consolidado. O Planalto apresentou bloqueio automatizado. Dispositivos com remissões sem teor exibido ficaram fora da seleção."
+  }
+]
