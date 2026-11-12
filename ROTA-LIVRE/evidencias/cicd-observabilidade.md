@@ -22,7 +22,14 @@ O executor extrai o SHA validado, monta as imagens antes de trocar os containers
 
 Validações pré-publicação executadas: `actionlint`, `bash -n`, ShellCheck, cinco cenários de aceite e rejeição da barreira, e recuperação isolada por ID de imagem com os dois serviços saudáveis e HTTP 200. [Workflow](../../.github/workflows/devsecops.yml) · [Barreira](../infra/release_gate.py) · [Executor](../infra/deploy.sh) · [Terraform OIDC opcional](../infra/github_oidc.tf)
 
-**Execução automática e SHA publicados** serão registrados após a execução do push autorizado.
+**Publicação automática comprovada.** O push de `1968d1a76bbd6e72b7d30b36d1895fff44f90fd3` para `main` disparou a execução `43247199380`, tentativa 1. Gitleaks, Semgrep, build/Trivy da API e do frontend e o job `Deploy - EC2` terminaram com sucesso. O teste de instrumentação também passou no job da API. O journal da instância registrou as linhas abaixo, confirmadas por uma consulta de diagnóstico SSM `e45d063f-8026-4542-8741-2df43086ff55`.
+
+```text
+ROTA_LIVRE_RELEASE_GATE run=43247199380 attempt=1 commit=1968d1a76bbd6e72b7d30b36d1895fff44f90fd3
+ROTA_LIVRE_DEPLOY_OK 1968d1a76bbd6e72b7d30b36d1895fff44f90fd3
+```
+
+O job e a consulta externa confirmaram o marcador do SHA, frontend HTTP 200 e API HTTP 200 com dois obstáculos. A EC2 `i-054604c12c64a62e9` manteve o IP `3.129.216.178` e somente TCP 80 de entrada pública no Security Group. A consulta capturou a fase de recriação do Compose antes de o frontend voltar a ficar saudável. A verificação final mostrou os dois containers saudáveis e o listener de métricas restrito ao loopback. [Execução aprovada](https://github.com/victoriafpizza/GlobalSolution2026/actions/runs/43247199380) · [Job de deploy](https://github.com/victoriafpizza/GlobalSolution2026/actions/runs/43247199380/job/131283340127) · [Commit](https://github.com/victoriafpizza/GlobalSolution2026/commit/1968d1a76bbd6e72b7d30b36d1895fff44f90fd3)
 
 ## Dashboard e coleta
 
@@ -38,6 +45,12 @@ O contador registra método conhecido, rota cadastrada e classe HTTP. Rotas desc
 | Saturação | `rota_livre_container_memory_usage_ratio{job="rota-livre-api"}` | 13,93% de memória na consulta ao datasource do Grafana |
 
 `promtool check config`, a saúde do datasource, o target `UP` e o provisionamento dos quatro painéis foram confirmados. Os três testes unitários da instrumentação passaram. O Trivy retornou saída 0 para a imagem instrumentada da API. [Captura real do Grafana](observabilidade-local.png) · [Dashboard JSON](../monitoring/grafana/dashboards/rota-livre.json) · [Configuração Prometheus](../monitoring/prometheus/prometheus.yml) · [Dashboard local](http://127.0.0.1:3000/d/rota-livre-devsecops)
+
+### Medições da EC2 pelo túnel SSM
+
+O túnel autenticado encaminhou a porta local 19091 para o loopback 9091 da EC2. `GET /metrics` pelo túnel retornou HTTP 200 com métricas Prometheus. Pelo endereço público, `/metrics` serviu HTML do frontend sem métricas. A instância local de Prometheus usada nesta validação tinha histórico separado da réplica e mostrou `host.docker.internal:19091/metrics` como `UP`, com rótulo `source=aws`. O Grafana retornou datasource `OK` e quatro painéis provisionados.
+
+Vinte requisições de verificação ao endpoint público elevaram o contador de sucessos de 3 para 23. As consultas feitas pelo datasource do Grafana retornaram **4,70 ms** de P95, **0,0946 req/s** em `GET /api/obstacles`, **0 req/s** de 5xx e **13,49%** do limite de memória do container. A captura foi feita após outra coleta e mostra a variação dos valores. [Captura real com métricas da AWS](observabilidade-aws.png)
 
 ## Alerta
 
