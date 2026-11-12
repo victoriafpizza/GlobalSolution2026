@@ -1,0 +1,81 @@
+---
+config:
+  layout: elk
+  theme: base
+  htmlLabels: false
+  themeVariables:
+    fontFamily: "Arial, sans-serif"
+    fontSize: "14px"
+    lineColor: "#334155"
+    textColor: "#172B43"
+    clusterBkg: "#F8FAFC"
+    clusterBorder: "#94A3B8"
+    edgeLabelBackground: "#FFFFFF"
+  flowchart:
+    curve: linear
+    nodeSpacing: 28
+    rankSpacing: 38
+---
+flowchart TB
+    accTitle: Arquitetura do ROTA LIVRE
+    accDescr: O acesso público chega ao Nginx na EC2. A instância verifica os jobs do GitHub antes de publicar. O Prometheus local coleta a API pelo túnel SSM.
+    USER(["Usuário · navegador"]):::public
+    MAP["OpenStreetMap · tiles<br/>UNPKG · ícones do Leaflet"]:::public
+
+    subgraph GITHUB["GitHub"]
+        REPO["Repositório público<br/>branch main"]:::delivery
+        CI["GitHub Actions<br/>build · Gitleaks · Semgrep · Trivy"]:::delivery
+        JOB["Deploy - EC2<br/>após aprovação dos jobs"]:::delivery
+        REPO -. push .-> CI
+        CI -. aprovações .-> JOB
+    end
+
+    subgraph AWS["AWS · Ohio (us-east-2)"]
+        SSM["AWS Systems Manager<br/>Session Manager"]:::observability
+        subgraph VPC["VPC padrão · subnet da EC2"]
+            SG["Security Group<br/>entrada pública TCP 80"]:::public
+            subgraph EC2["EC2 t3.small · Amazon Linux 2023"]
+                GATE["systemd · verified-pull<br/>release_gate.py e deploy.sh"]:::delivery
+                AGENT["SSM Agent<br/>perfil IAM da instância"]:::observability
+                LOOP["Loopback da EC2<br/>127.0.0.1:9091"]:::observability
+                subgraph COMPOSE["Docker Compose · rede bridge rota-livre-network"]
+                    NGINX["Nginx :8080<br/>React/Vite · Leaflet"]:::public
+                    API["FastAPI :8000<br/>obstáculos · instrumentação Prometheus"]:::service
+                    NGINX -->|"/api/obstacles"| API
+                end
+            end
+            SG -->|"80 → 8080"| NGINX
+        end
+    end
+
+    subgraph LOCAL["Estação local · monitoramento"]
+        TUNNEL["AWS CLI + Session Manager Plugin<br/>loopback :19091 na validação"]:::observability
+        PROM["Prometheus<br/>127.0.0.1:9090"]:::observability
+        GRAFANA["Grafana<br/>127.0.0.1:3000"]:::observability
+        GRAFANA ==>|"consulta PromQL"| PROM
+        PROM ==>|"scrape /metrics"| TUNNEL
+    end
+
+    USER -->|"Internet · HTTP 3.129.216.178"| SG
+    USER -->|"HTTPS · mapa e imagens"| MAP
+    JOB -.->|"HTTP · SHA, frontend e API"| SG
+    GATE -.->|"HTTPS · HEAD, jobs e código"| REPO
+    GATE -.->|"atualiza containers"| COMPOSE
+    TUNNEL <==>|"sessão autenticada"| SSM
+    AGENT <==>|"canal aberto pela EC2"| SSM
+    AGENT ==>|"encaminha à porta privada"| LOOP
+    LOOP ==>|"/metrics → :8000"| API
+
+    classDef public fill:#E9F2FC,stroke:#245786,color:#172B43,stroke-width:1.4px
+    classDef delivery fill:#F1ECFA,stroke:#664A91,color:#29213B,stroke-width:1.4px
+    classDef observability fill:#E4F5EF,stroke:#287466,color:#13372F,stroke-width:1.4px
+    classDef service fill:#FFF3DF,stroke:#926315,color:#402E0C,stroke-width:1.4px
+    style GITHUB fill:#FAF8FE,stroke:#A497B8
+    style AWS fill:#F7F9FC,stroke:#64748B
+    style VPC fill:#F1F5F9,stroke:#94A3B8
+    style EC2 fill:#FFFFFF,stroke:#71849A
+    style COMPOSE fill:#F5F8FC,stroke:#71849A
+    style LOCAL fill:#F2F9F7,stroke:#6D9C93
+    linkStyle 0,1,8,9,10 stroke:#664A91,stroke-width:1.6px
+    linkStyle 2,3,6,7 stroke:#245786,stroke-width:1.5px
+    linkStyle 4,5,11,12,13,14 stroke:#287466,stroke-width:2.6px
