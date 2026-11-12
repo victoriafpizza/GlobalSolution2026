@@ -75,7 +75,14 @@ A comparação abaixo usa as imagens anteriores já presentes no Docker Desktop 
 
 A API migrou de Debian para Alpine e atualizou FastAPI 0.115.12 → 0.162.2 e Uvicorn 0.34.2 → 0.54.0. O build resolveu Starlette 0.46.2 → 1.10.0, eliminando, entre outros achados, CVE-2025-62727, CVE-2026-48818 e CVE-2026-54283. As outras ocorrências HIGH em Python foram CVE-2026-23949 em jaraco.context 5.3.0 e CVE-2026-24049 em wheel 0.45.1. Esses pacotes deixaram de aparecer entre os achados da imagem reconstruída. No frontend, `apk upgrade --no-cache` atualizou o zlib 1.3.2-r0 → 1.4-r0, eliminando CVE-2026-85091. Os totais do frontend anterior vêm da reprodução local, pois o workflow histórico pulou esse scanner. [FastAPI 0.162.2](https://fastapi.tiangolo.com/release-notes/#01622-2026-11-07), [Starlette](https://pypi.org/project/starlette/1.10.0/), [Uvicorn](https://pypi.org/project/uvicorn/0.54.0/)
 
-A URL da execução corrigida será registrada após a validação do push pelo GitHub Actions. A tabela registra a comparação reproduzida localmente.
+A execução corrigida `43241726597` foi disparada por push do commit `d4424663fbf562e1b4c74a69ba34abcfe3671b9a` em `main` e terminou com conclusão `success`. Os dois jobs da matriz passaram na validação do Compose, build, verificação do UID e Trivy. [Execução aprovada](https://github.com/victoriafpizza/GlobalSolution2026/actions/runs/43241726597)
+
+| Job no GitHub Actions | Resultado |
+| --- | --- |
+| [Gitleaks](https://github.com/victoriafpizza/GlobalSolution2026/actions/runs/43241726597/job/131263647484) | Aprovado |
+| [Semgrep](https://github.com/victoriafpizza/GlobalSolution2026/actions/runs/43241726597/job/131263646976) | Aprovado |
+| [Build e Trivy da API](https://github.com/victoriafpizza/GlobalSolution2026/actions/runs/43241726597/job/131263647642) | Aprovado |
+| [Build e Trivy do frontend](https://github.com/victoriafpizza/GlobalSolution2026/actions/runs/43241726597/job/131263647400) | Aprovado |
 
 ## Arquivos para conferência
 
