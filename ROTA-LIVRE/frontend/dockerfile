@@ -1,29 +1,23 @@
-
-# ROTA LIVRE — Frontend
-# Etapa 1: construção do React
-
 FROM node:24-alpine AS build
 
 WORKDIR /app
 
-COPY package*.json ./
-
+COPY package.json package-lock.json ./
 RUN npm ci
 
-COPY . .
-
+COPY index.html vite.config.js ./
+COPY src/ src/
+COPY public/ public/
 RUN npm run build
-
-# Etapa 2: servidor web enxuto
 
 FROM nginxinc/nginx-unprivileged:stable-alpine
 
+USER root
+RUN apk upgrade --no-cache
 COPY --from=build /app/dist /usr/share/nginx/html
-
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+USER 101:101
 
 EXPOSE 8080
-
-HEALTHCHECK --interval=30s --timeout=5s \
-  --start-period=10s --retries=3 \
-  CMD wget -q --spider http://127.0.0.1:8080/ || exit 1
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD ["wget", "-q", "--spider", "http://127.0.0.1:8080/"]

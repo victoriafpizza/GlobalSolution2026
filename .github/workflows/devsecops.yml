@@ -16,58 +16,70 @@ jobs:
 
     steps:
       - name: Baixar codigo
-        uses: actions/checkout@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
-      - name: Verificar segredos
-        uses: gitleaks/gitleaks-action@v3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verificar historico Git
+        run: |
+          docker run --rm -e GIT_CONFIG_COUNT=1 -e GIT_CONFIG_KEY_0=safe.directory \
+            -e GIT_CONFIG_VALUE_0=/repo -v "$PWD:/repo:ro" \
+            zricethezav/gitleaks:v8.30.1@sha256:c00b6bd0aeb3071cbcb79009cb16a60dd9e0a7c60e2be9ab65d25e6bc8abbb7f git --redact --log-opts="--all HEAD" /repo
 
   semgrep:
     name: Semgrep - Analise de codigo
     runs-on: ubuntu-24.04
 
-    container:
-      image: semgrep/semgrep
-
     steps:
       - name: Baixar codigo
-        uses: actions/checkout@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Analisar seguranca
-        run: semgrep scan --config auto --error ROTA-LIVRE/backend ROTA-LIVRE/frontend/src
+        run: |
+          docker run --rm -v "$PWD:/src:ro" -w /src semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d \
+            semgrep scan --config p/default --error --metrics=off ROTA-LIVRE/backend ROTA-LIVRE/frontend/src
 
   build-trivy:
-    name: Docker Build e Trivy
+    name: Docker Build e Trivy (${{ matrix.service }})
     runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - service: api
+            context: backend
+          - service: frontend
+            context: frontend
 
     steps:
       - name: Baixar codigo
-        uses: actions/checkout@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Validar Docker Compose
         run: docker compose -f ROTA-LIVRE/compose.yaml config --quiet
 
-      - name: Construir imagem da API
-        run: docker build -t rota-livre-api:ci ./ROTA-LIVRE/backend
+      - name: Construir imagem
+        run: |
+          docker build --pull -f ROTA-LIVRE/${{ matrix.context }}/dockerfile \
+            -t rota-livre-${{ matrix.service }}:ci ROTA-LIVRE/${{ matrix.context }}
 
-      - name: Construir imagem do frontend
-        run: docker build -t rota-livre-frontend:ci ./ROTA-LIVRE/frontend
+      - name: Verificar usuario sem privilegios
+        run: |
+          uid=$(docker run --rm --entrypoint id rota-livre-${{ matrix.service }}:ci -u)
+          echo "UID efetivo: $uid"
+          test "$uid" -gt 0
 
-      - name: Trivy - Analisar API
-        uses: aquasecurity/trivy-action@v0.36.0
+      - name: Trivy - Vulnerabilidades e segredos
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
-          image-ref: rota-livre-api:ci
-          format: table
-          exit-code: '1'
-          severity: CRITICAL,HIGH
-
-      - name: Trivy - Analisar frontend
-        uses: aquasecurity/trivy-action@v0.36.0
-        with:
-          image-ref: rota-livre-frontend:ci
+          version: v0.76.2
+          image-ref: rota-livre-${{ matrix.service }}:ci
+          scanners: vuln,secret
           format: table
           exit-code: '1'
           severity: CRITICAL,HIGH

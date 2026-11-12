@@ -1,41 +1,21 @@
+FROM python:3.13-alpine
 
-# ROTA LIVRE - API FastAPI
-# FIAP Global Solution CitizenTech 2026.2
-
-FROM python:3.11-slim
-
-# Evita arquivos .pyc e deixa logs visíveis
 ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1
+    PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# Cria um usuário sem privilégios administrativos
-RUN groupadd --system appgroup \
-    && useradd --system \
-       --gid appgroup \
-       --home-dir /app \
-       --no-create-home appuser
+COPY requirements.txt ./
+RUN apk upgrade --no-cache \
+    && python -m pip install --no-cache-dir --only-binary=:all: -r requirements.txt \
+    && python -m pip check \
+    && python -m pip uninstall -y pip
 
-# Instala somente as dependências necessárias
-COPY requirements.txt .
+COPY main.py ./
+USER 10001:10001
 
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copia o código da API
-COPY --chown=appuser:appgroup main.py .
-
-# Executa a aplicação com usuário não root
-USER appuser
-
-# Porta interna da API
 EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD ["python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
 
-# Verifica se o serviço está respondendo
-HEALTHCHECK --interval=30s --timeout=5s \
-    --start-period=10s --retries=3 \
-    CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)" || exit 1
-
-# Inicia o servidor FastAPI
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

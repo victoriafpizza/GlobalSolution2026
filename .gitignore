@@ -15,11 +15,21 @@ __pycache__/
 *.pem
 *.key
 secrets/
+.aws/
+credentials
+credentials.*
+*.p12
+*.pfx
+.npmrc
 
 # Terraform
 **/.terraform/
+**/.terraform-state/
 *.tfstate
 *.tfstate.*
+.terraform.tfstate.lock.info
+terraform.tfplan
+*.tfplan
 *.tfvars
 *.tfvars.json
 crash.log

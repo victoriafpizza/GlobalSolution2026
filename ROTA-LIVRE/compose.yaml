@@ -3,7 +3,7 @@ services:
   api:
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     image: rota-livre-api:1.0
     restart: unless-stopped
     init: true
@@ -25,12 +25,12 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     image: rota-livre-frontend:1.0
     restart: unless-stopped
     init: true
     ports:
-      - "127.0.0.1:8080:8080"
+      - "${ROTA_LIVRE_HTTP_BIND:-127.0.0.1:8080}:8080"
     depends_on:
       api:
         condition: service_healthy
