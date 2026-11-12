@@ -1,0 +1,26 @@
+Execução normal com o lote de exemplo
+Situação: APROVADO
+
+PowerShell em C:\RPAGS
+$env:PYTHONIOENCODING = 'utf-8'
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' -B main.py --arquivo 'dados\obstaculos_exemplo.json'
+$LASTEXITCODE
+Get-Content -Encoding utf8 .\logs\rota_livre.log | Select-String '7c1f4a38af474ca29e42ffab841c91ab'
+
+stderr real
+INFO Execução iniciada.
+WARNING Registro inválido na posição 6. Campo obrigatório ausente: descricao. latitude deve ser um número entre -90 e 90.
+WARNING Registro duplicado na posição 5. Mesmo ID de um registro válido anterior. Posição original: 1.
+INFO Origem dos dados: arquivo. Relatório: C:\RPAGS\dados\saida\resultado_c9519395973146028ab129e75ff75ef8.json
+INFO Execução finalizada. origem=arquivo total=6 validos=4 invalidos=1 duplicados=1 erros=0 situacao=sucesso_parcial
+Código de saída: 0
+
+Linhas reais do log persistente
+2026-11-12T16:28:39Z | INFO | 7c1f4a38af474ca29e42ffab841c91ab | Execução iniciada.
+2026-11-12T16:28:39Z | WARNING | 7c1f4a38af474ca29e42ffab841c91ab | Registro inválido na posição 6. Campo obrigatório ausente: descricao. latitude deve ser um número entre -90 e 90.
+2026-11-12T16:28:39Z | WARNING | 7c1f4a38af474ca29e42ffab841c91ab | Registro duplicado na posição 5. Mesmo ID de um registro válido anterior. Posição original: 1.
+2026-11-12T16:28:39Z | INFO | 7c1f4a38af474ca29e42ffab841c91ab | Origem dos dados: arquivo. Relatório: C:\RPAGS\dados\saida\resultado_c9519395973146028ab129e75ff75ef8.json
+2026-11-12T16:28:39Z | INFO | 7c1f4a38af474ca29e42ffab841c91ab | Execução finalizada. origem=arquivo total=6 validos=4 invalidos=1 duplicados=1 erros=0 situacao=sucesso_parcial
+
+Totais reais do relatório
+{"total": 6, "validos": 4, "invalidos": 1, "duplicados": 1}

@@ -1,0 +1,51 @@
+{
+  "execucao_id": "7c1f4a38af474ca29e42ffab841c91ab",
+  "processado_em": "2026-11-12T16:28:39.609+00:00",
+  "origem": "arquivo",
+  "situacao": "sucesso_parcial",
+  "resumo": {
+    "total": 6,
+    "validos": 4,
+    "invalidos": 1,
+    "duplicados": 1
+  },
+  "por_prioridade": {
+    "alta": 2,
+    "media": 1,
+    "baixa": 1
+  },
+  "obstaculos": [
+    {
+      "id": 101,
+      "tipo": "Rampa bloqueada",
+      "latitude": -23.5614,
+      "longitude": -46.6559,
+      "prioridade": "alta",
+      "status_triagem": "processado"
+    },
+    {
+      "id": 102,
+      "tipo": "Travessia perigosa",
+      "latitude": -23.562,
+      "longitude": -46.6565,
+      "prioridade": "alta",
+      "status_triagem": "processado"
+    },
+    {
+      "id": 103,
+      "tipo": "Calçada danificada",
+      "latitude": -23.561,
+      "longitude": -46.654,
+      "prioridade": "media",
+      "status_triagem": "processado"
+    },
+    {
+      "id": 104,
+      "tipo": "Entulho na calçada",
+      "latitude": -23.559,
+      "longitude": -46.654,
+      "prioridade": "baixa",
+      "status_triagem": "processado"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+Suíte de regressão da Etapa 3
+Situação: APROVADO
+
+PowerShell em C:\RPAGS
+$env:PYTHONPATH = (Resolve-Path .\.venv\etapa3).Path
+$env:PYTHONIOENCODING = 'utf-8'
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' -B -m unittest discover -s tests -v
+
+Saída real
+test_api_indisponivel (test_etapa3.RegressaoEtapa3.test_api_indisponivel) ... ok
+test_execucoes_limpas_tem_ids_distintos_e_sucesso (test_etapa3.RegressaoEtapa3.test_execucoes_limpas_tem_ids_distintos_e_sucesso) ... ok
+test_ids_equivalentes_preservam_a_entrada (test_etapa3.RegressaoEtapa3.test_ids_equivalentes_preservam_a_entrada) ... ok
+test_json_malformado (test_etapa3.RegressaoEtapa3.test_json_malformado) ... ok
+test_latitude_invalida_no_meio_do_lote (test_etapa3.RegressaoEtapa3.test_latitude_invalida_no_meio_do_lote) ... ok
+test_leitor_e_endpoints_com_sucesso_e_falha (test_etapa3.RegressaoEtapa3.test_leitor_e_endpoints_com_sucesso_e_falha) ... ok
+test_lote_prioridades_invalidos_duplicidade_e_logs (test_etapa3.RegressaoEtapa3.test_lote_prioridades_invalidos_duplicidade_e_logs) ... ok
+test_rotacao_mantem_tres_copias (test_etapa3.RegressaoEtapa3.test_rotacao_mantem_tres_copias) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 13.839s
+
+OK
+
+Código de saída: 0

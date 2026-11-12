@@ -1,0 +1,30 @@
+Validação do leitor e da publicação para FastAPI
+Situação da validação do leitor: APROVADO
+
+Comandos de consulta equivalentes no PowerShell
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' -B main.py --arquivo 'dados\obstaculos_exemplo.json'
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' -B -c 'from src.integracao import ler_ultimo_relatorio; print(ler_ultimo_relatorio())'
+
+Saídas reais das verificações Python
+Relatório lido: resultado_c9519395973146028ab129e75ff75ef8.json
+Chaves do relatório: origem, resumo, validos, invalidos, duplicados, execucao_id, processado_em, situacao
+Execução: 7c1f4a38af474ca29e42ffab841c91ab
+Totais: {'total': 6, 'validos': 4, 'invalidos': 1, 'duplicados': 1}
+Por prioridade: {'alta': 2, 'media': 1, 'baixa': 1}
+Campos por obstáculo publicado: id, tipo, latitude, longitude, prioridade, status_triagem
+Pasta vazia: RelatorioIndisponivel, ausente=True, Nenhum relatório de triagem disponível.
+JSON corrompido isolado: RelatorioIndisponivel, ausente=False, Nenhum relatório de triagem válido está disponível.
+Arquivos incompleto e corrompido mais recentes descartados. Seleção: 7c1f4a38af474ca29e42ffab841c91ab
+Teste de hard link indisponível: PermissionError
+Rotação com limite temporário de 250 bytes: rota_livre.log, rota_livre.log.1, rota_livre.log.2, rota_livre.log.3.
+Entrada de exemplo e 7 evidências anteriores preservadas por comparação SHA-256.
+
+Validação HTTP real via 127.0.0.1. Situação: APROVADO
+FastAPI 0.162.5, Uvicorn 0.54.0
+GET http://127.0.0.1:35652/rpa/obstaculos-processados -> HTTP 200. Resposta integral em 09_saida_integracao.json.
+GET http://127.0.0.1:35652/rpa/resumo -> HTTP 200. {"execucao_id": "7c1f4a38af474ca29e42ffab841c91ab", "processado_em": "2026-11-12T16:28:39.609+00:00", "origem": "arquivo", "situacao": "sucesso_parcial", "resumo": {"total": 6, "validos": 4, "invalidos": 1, "duplicados": 1}, "por_prioridade": {"alta": 2, "media": 1, "baixa": 1}}
+GET http://127.0.0.1:35657/rpa/obstaculos-processados -> HTTP 404. {"detail": "Nenhum relatório de triagem disponível."}
+GET http://127.0.0.1:35657/rpa/resumo -> HTTP 404. {"detail": "Nenhum relatório de triagem disponível."}
+GET http://127.0.0.1:35657/rpa/obstaculos-processados -> HTTP 503. {"detail": "Nenhum relatório de triagem válido está disponível."}
+GET http://127.0.0.1:35657/rpa/resumo -> HTTP 503. {"detail": "Nenhum relatório de triagem válido está disponível."}
+Hard link para arquivo externo rejeitado: Nenhum relatório de triagem válido está disponível.

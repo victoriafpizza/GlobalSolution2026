@@ -1,0 +1,91 @@
+Cenário A — API indisponível e verificação complementar de timeout
+Situação: APROVADO
+
+Comando executado no PowerShell a partir de C:\RPAGS
+@'
+import os, socket, subprocess, sys, threading, time
+
+def executar(nome, porta):
+    cmd = [sys.executable, "-B", "main.py", "--api-url", f"http://127.0.0.1:{porta}/obstaculos", "--timeout", "0.5", "--tentativas", "3", "--intervalo", "0.2"]
+    env = {**os.environ, "NO_PROXY": "127.0.0.1", "PYTHONIOENCODING": "utf-8"}
+    env.pop("ROTA_CONTINGENCIA", None)
+    inicio = time.perf_counter()
+    r = subprocess.run(cmd, env=env, capture_output=True, text=True, encoding="utf-8", timeout=10)
+    duracao = time.perf_counter() - inicio
+    print(f"\n{nome}\nComando: {subprocess.list2cmdline(cmd)}\nCódigo de saída: {r.returncode}\nDuração: {duracao:.3f} s\nstdout: {r.stdout.strip() or '(vazio)'}\nstderr:\n{r.stderr.rstrip()}", flush=True)
+    logs = r.stderr
+    assert r.returncode == 1 and logs.count("WARNING API, tentativa") == 3
+    assert all(f"tentativa {i} de 3" in logs for i in range(1,4))
+    assert "Não foi possível obter uma lista de obstáculos da API." in logs and "Traceback" not in logs
+    return logs, duracao
+
+with socket.socket() as reservada:
+    reservada.bind(("127.0.0.1", 0))
+    porta = reservada.getsockname()[1]
+    try:
+        with socket.create_connection(("127.0.0.1", porta), timeout=3):
+            raise AssertionError("A porta de teste aceitou conexão.")
+    except ConnectionRefusedError as e:
+        print(f"Sondagem independente da porta sem serviço: {type(e).__name__}, WinError {e.winerror}", flush=True)
+    executar("API indisponível em porta sem serviço", porta)
+
+with socket.socket() as lenta:
+    lenta.bind(("127.0.0.1", 0))
+    lenta.listen(3)
+    porta = lenta.getsockname()[1]
+    aceitas = []
+    conexoes = []
+    def receber():
+        for _ in range(3):
+            conexao, _ = lenta.accept()
+            conexoes.append(conexao)
+            aceitas.append(time.perf_counter())
+    thread = threading.Thread(target=receber, daemon=True)
+    thread.start()
+    try:
+        logs, duracao = executar("Controle complementar com conexão aceita e sem resposta HTTP", porta)
+        thread.join(1)
+        intervalos = [b-a for a,b in zip(aceitas, aceitas[1:])]
+        print("Conexões aceitas:", len(aceitas))
+        print("Intervalos entre conexões:", ", ".join(f"{s:.3f} s" for s in intervalos))
+        assert logs.count("timeout.") == 3 and len(aceitas) == 3
+        assert all(0.6 <= s <= 1.5 for s in intervalos) and 1.75 <= duracao <= 4
+    finally:
+        for conexao in conexoes:
+            conexao.close()
+
+print("APROVADO")
+'@ | & 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' -X utf8 -B -
+
+Saída real da execução
+Sondagem independente da porta sem serviço: ConnectionRefusedError, WinError 10061
+
+API indisponível em porta sem serviço
+Comando: "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe" -B main.py --api-url http://127.0.0.1:51893/obstaculos --timeout 0.5 --tentativas 3 --intervalo 0.2
+Código de saída: 1
+Duração: 2.339 s
+stdout: (vazio)
+stderr:
+WARNING API, tentativa 1 de 3. timeout.
+WARNING API, tentativa 2 de 3. timeout.
+WARNING API, tentativa 3 de 3. timeout.
+ERROR Falha na entrada. Não foi possível obter uma lista de obstáculos da API.
+
+Controle complementar com conexão aceita e sem resposta HTTP
+Comando: "C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe" -B main.py --api-url http://127.0.0.1:51912/obstaculos --timeout 0.5 --tentativas 3 --intervalo 0.2
+Código de saída: 1
+Duração: 2.355 s
+stdout: (vazio)
+stderr:
+WARNING API, tentativa 1 de 3. timeout.
+WARNING API, tentativa 2 de 3. timeout.
+WARNING API, tentativa 3 de 3. timeout.
+ERROR Falha na entrada. Não foi possível obter uma lista de obstáculos da API.
+Conexões aceitas: 3
+Intervalos entre conexões: 0.735 s, 0.716 s
+APROVADO
+
+Resultados observados
+A sondagem confirmou a recusa em uma porta sem serviço. Com timeout de 0,5 s, o robô registrou três timeouts e terminou com código 1 e mensagem clara, sem traceback. O limite menor pode expirar antes de o Windows devolver a recusa.
+O controle complementar aceitou as três conexões locais e reteve as respostas HTTP. Os intervalos observados foram compatíveis com 0,5 s de timeout e 0,2 s de espera entre tentativas. A execução terminou com código 1.
+O teste inicial no sandbox obteve WinError 10013 na sondagem direta. A execução registrada acima ocorreu com permissão para sockets locais e usou somente 127.0.0.1.

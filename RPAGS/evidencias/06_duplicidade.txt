@@ -1,0 +1,66 @@
+Cenário D — IDs equivalentes
+Situação: APROVADO
+
+Comandos no PowerShell a partir de C:\RPAGS
+$env:PYTHONIOENCODING = 'utf-8'
+New-Item -ItemType Directory -Force -Path 'C:\Users\victo\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{fdb1e15d-3a44-450a-a1cb-9248c4d44e52}\Temp\rotagstest-a4d82g4_'
+Set-Content -LiteralPath 'C:\Users\victo\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{fdb1e15d-3a44-450a-a1cb-9248c4d44e52}\Temp\rotagstest-a4d82g4_\duplicado.json' -Value '[{"id": 101, "tipo": "Rampa bloqueada", "descricao": "Primeiro relato", "latitude": -23, "longitude": -46, "status": "aberto"}, {"id": " 101 ", "tipo": "Rampa bloqueada", "descricao": "Segundo relato", "latitude": -23, "longitude": -46, "status": "aberto"}]' -Encoding utf8
+Get-FileHash -LiteralPath 'C:\Users\victo\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{fdb1e15d-3a44-450a-a1cb-9248c4d44e52}\Temp\rotagstest-a4d82g4_\duplicado.json'
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' '-B' 'main.py' '--arquivo' 'C:\Users\victo\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{fdb1e15d-3a44-450a-a1cb-9248c4d44e52}\Temp\rotagstest-a4d82g4_\duplicado.json'
+$LASTEXITCODE
+
+Saída real do robô em Python 3.12.14
+stdout
+(vazio)
+stderr
+INFO Origem dos dados: arquivo. Relatório: C:\RPAGS\dados\saida\resultado_162dca480b214b86ab6bf8f937c6cc7d.json
+Código de saída: 0
+Novos relatórios: 1
+Get-Content -Raw -Encoding utf8 'dados\saida\resultado_162dca480b214b86ab6bf8f937c6cc7d.json'
+
+Conteúdo real do relatório
+{
+  "origem": "arquivo",
+  "resumo": {
+    "total": 2,
+    "validos": 1,
+    "invalidos": 0,
+    "duplicados": 1
+  },
+  "validos": [
+    {
+      "posicao": 1,
+      "registro": {
+        "id": 101,
+        "tipo": "Rampa bloqueada",
+        "descricao": "Primeiro relato",
+        "latitude": -23,
+        "longitude": -46,
+        "status": "aberto"
+      },
+      "prioridade": "alta"
+    }
+  ],
+  "invalidos": [],
+  "duplicados": [
+    {
+      "posicao": 2,
+      "registro": {
+        "id": " 101 ",
+        "tipo": "Rampa bloqueada",
+        "descricao": "Segundo relato",
+        "latitude": -23,
+        "longitude": -46,
+        "status": "aberto"
+      },
+      "motivo": "Mesmo ID de um registro válido anterior.",
+      "posicao_original": 1
+    }
+  ]
+}
+
+
+Resultados observados
+Registros na entrada após a execução: 2
+SHA-256 da entrada antes: 486db36ac46f18ceab23bfcf62773b445325002bbac9c33c05ec7e449694f5c8
+SHA-256 da entrada depois: 486db36ac46f18ceab23bfcf62773b445325002bbac9c33c05ec7e449694f5c8

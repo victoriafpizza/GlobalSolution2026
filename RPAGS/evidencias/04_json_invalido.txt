@@ -1,0 +1,22 @@
+Cenário B — JSON malformado
+Situação: APROVADO
+
+Comandos no PowerShell a partir de C:\RPAGS
+$env:PYTHONIOENCODING = 'utf-8'
+Get-FileHash -LiteralPath 'dados/obstaculos_exemplo.json'
+New-Item -ItemType Directory -Force -Path 'C:\Users\victo\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{fdb1e15d-3a44-450a-a1cb-9248c4d44e52}\Temp\rotagstest-a4d82g4_'
+Set-Content -LiteralPath 'C:\Users\victo\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{fdb1e15d-3a44-450a-a1cb-9248c4d44e52}\Temp\rotagstest-a4d82g4_\malformado.json' -Value '[{"id":900,}]' -Encoding utf8
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' '-B' 'main.py' '--arquivo' 'C:\Users\victo\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{fdb1e15d-3a44-450a-a1cb-9248c4d44e52}\Temp\rotagstest-a4d82g4_\malformado.json'
+$LASTEXITCODE
+
+Saída real do robô em Python 3.12.14
+stdout
+(vazio)
+stderr
+ERROR Falha na entrada. JSON malformado na linha 1, coluna 12.
+Código de saída: 1
+Novos relatórios: 0
+
+Resultados observados
+SHA-256 da entrada original antes: 1a1d3b495a1f175cd3c07d2dae03c9a2d5d600e256bb58ea9f2069e290b7ce7d
+SHA-256 da entrada original depois: 1a1d3b495a1f175cd3c07d2dae03c9a2d5d600e256bb58ea9f2069e290b7ce7d

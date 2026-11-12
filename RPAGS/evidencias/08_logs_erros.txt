@@ -1,0 +1,44 @@
+Logs de erro em execuções reais
+Situação: APROVADO
+
+PowerShell em C:\RPAGS
+$env:PYTHONIOENCODING = 'utf-8'
+$env:NO_PROXY = '127.0.0.1'
+Remove-Item Env:\ROTA_CONTINGENCIA -ErrorAction SilentlyContinue
+
+API indisponível em porta sem serviço
+Sondagem TCP independente: ConnectionRefusedError, WinError 10061
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' '-B' 'main.py' '--api-url' 'http://127.0.0.1:35633/obstaculos' '--timeout' '0.5' '--tentativas' '2' '--intervalo' '0.2'
+$LASTEXITCODE
+
+stderr real
+INFO Execução iniciada.
+WARNING API, tentativa 1 de 2. timeout.
+WARNING API, tentativa 2 de 2. timeout.
+ERROR Falha na entrada. Não foi possível obter uma lista de obstáculos da API.
+INFO Execução finalizada. origem=api total=0 validos=0 invalidos=0 duplicados=0 erros=1 situacao=falha
+Código de saída: 1
+
+Log persistente
+2026-11-12T18:38:34Z | INFO | a030d19254ed467fb84dc93c4747c4f2 | Execução iniciada.
+2026-11-12T18:38:35Z | WARNING | a030d19254ed467fb84dc93c4747c4f2 | API, tentativa 1 de 2. timeout.
+2026-11-12T18:38:35Z | WARNING | a030d19254ed467fb84dc93c4747c4f2 | API, tentativa 2 de 2. timeout.
+2026-11-12T18:38:35Z | ERROR | a030d19254ed467fb84dc93c4747c4f2 | Falha na entrada. Não foi possível obter uma lista de obstáculos da API.
+2026-11-12T18:38:35Z | INFO | a030d19254ed467fb84dc93c4747c4f2 | Execução finalizada. origem=api total=0 validos=0 invalidos=0 duplicados=0 erros=1 situacao=falha
+
+JSON malformado em arquivo temporário
+New-Item -ItemType Directory -Force -Path 'C:\Users\victo\AppData\Local\Temp\rota-etapa3-tvtu3t0h'
+Set-Content -LiteralPath 'C:\Users\victo\AppData\Local\Temp\rota-etapa3-tvtu3t0h\malformado.json' -Value '[{"id":900,}]' -Encoding utf8
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' '-B' 'main.py' '--arquivo' 'C:\Users\victo\AppData\Local\Temp\rota-etapa3-tvtu3t0h\malformado.json'
+$LASTEXITCODE
+
+stderr real
+INFO Execução iniciada.
+ERROR Falha na entrada. JSON malformado na linha 1, coluna 12.
+INFO Execução finalizada. origem=arquivo total=0 validos=0 invalidos=0 duplicados=0 erros=1 situacao=falha
+Código de saída: 1
+
+Log persistente
+2026-11-12T18:38:37Z | INFO | 922b14a3393e4395b9c156ec87c92c70 | Execução iniciada.
+2026-11-12T18:38:37Z | ERROR | 922b14a3393e4395b9c156ec87c92c70 | Falha na entrada. JSON malformado na linha 1, coluna 12.
+2026-11-12T18:38:37Z | INFO | 922b14a3393e4395b9c156ec87c92c70 | Execução finalizada. origem=arquivo total=0 validos=0 invalidos=0 duplicados=0 erros=1 situacao=falha

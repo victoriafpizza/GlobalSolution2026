@@ -1,0 +1,49 @@
+[
+  {
+    "id": 101,
+    "tipo": "Rampa bloqueada",
+    "descricao": "Material de obra ocupa a rampa de acesso.",
+    "latitude": -23.5614,
+    "longitude": -46.6559,
+    "status": "aberto"
+  },
+  {
+    "id": 102,
+    "tipo": "Travessia perigosa",
+    "descricao": "A faixa de pedestres está apagada.",
+    "latitude": -23.562,
+    "longitude": -46.6565,
+    "status": "aberto"
+  },
+  {
+    "id": 103,
+    "tipo": "Calçada danificada",
+    "descricao": "Há placas quebradas na calçada.",
+    "latitude": -23.561,
+    "longitude": -46.654,
+    "status": "aberto"
+  },
+  {
+    "id": 104,
+    "tipo": "Entulho na calçada",
+    "descricao": "Há entulho próximo ao ponto de ônibus.",
+    "latitude": -23.559,
+    "longitude": -46.654,
+    "status": "aberto"
+  },
+  {
+    "id": "101",
+    "tipo": "Rampa bloqueada",
+    "descricao": "Segundo relato sobre a mesma rampa.",
+    "latitude": -23.5614,
+    "longitude": -46.6559,
+    "status": "aberto"
+  },
+  {
+    "id": 105,
+    "tipo": "Calçada danificada",
+    "latitude": -100,
+    "longitude": -46.652,
+    "status": "aberto"
+  }
+]

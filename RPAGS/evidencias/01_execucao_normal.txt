@@ -1,0 +1,112 @@
+Execução normal com o lote de exemplo
+Situação: APROVADO
+
+Comandos no PowerShell a partir de C:\RPAGS
+$env:PYTHONIOENCODING = 'utf-8'
+& 'C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1111-570-0_26.1111.570.0_x64__3k8sg7r9htsxt\dependencies\python\python.exe' '-B' 'main.py' '--arquivo' 'dados\obstaculos_exemplo.json'
+$LASTEXITCODE
+
+Saída real do robô em Python 3.12.14
+stdout
+(vazio)
+stderr
+INFO Origem dos dados: arquivo. Relatório: C:\RPAGS\dados\saida\resultado_05ff01af8099411e8712b0432cec9a47.json
+Código de saída: 0
+Novos relatórios: 1
+Get-Content -Raw -Encoding utf8 'dados\saida\resultado_05ff01af8099411e8712b0432cec9a47.json'
+
+Conteúdo real do relatório
+{
+  "origem": "arquivo",
+  "resumo": {
+    "total": 6,
+    "validos": 4,
+    "invalidos": 1,
+    "duplicados": 1
+  },
+  "validos": [
+    {
+      "posicao": 1,
+      "registro": {
+        "id": 101,
+        "tipo": "Rampa bloqueada",
+        "descricao": "Material de obra ocupa a rampa de acesso.",
+        "latitude": -23.5614,
+        "longitude": -46.6559,
+        "status": "aberto"
+      },
+      "prioridade": "alta"
+    },
+    {
+      "posicao": 2,
+      "registro": {
+        "id": 102,
+        "tipo": "Travessia perigosa",
+        "descricao": "A faixa de pedestres está apagada.",
+        "latitude": -23.562,
+        "longitude": -46.6565,
+        "status": "aberto"
+      },
+      "prioridade": "alta"
+    },
+    {
+      "posicao": 3,
+      "registro": {
+        "id": 103,
+        "tipo": "Calçada danificada",
+        "descricao": "Há placas quebradas na calçada.",
+        "latitude": -23.561,
+        "longitude": -46.654,
+        "status": "aberto"
+      },
+      "prioridade": "media"
+    },
+    {
+      "posicao": 4,
+      "registro": {
+        "id": 104,
+        "tipo": "Entulho na calçada",
+        "descricao": "Há entulho próximo ao ponto de ônibus.",
+        "latitude": -23.559,
+        "longitude": -46.654,
+        "status": "aberto"
+      },
+      "prioridade": "baixa"
+    }
+  ],
+  "invalidos": [
+    {
+      "posicao": 6,
+      "registro": {
+        "id": 105,
+        "tipo": "Calçada danificada",
+        "latitude": -100,
+        "longitude": -46.652,
+        "status": "aberto"
+      },
+      "motivos": [
+        "Campo obrigatório ausente: descricao.",
+        "latitude deve ser um número entre -90 e 90."
+      ]
+    }
+  ],
+  "duplicados": [
+    {
+      "posicao": 5,
+      "registro": {
+        "id": "101",
+        "tipo": "Rampa bloqueada",
+        "descricao": "Segundo relato sobre a mesma rampa.",
+        "latitude": -23.5614,
+        "longitude": -46.6559,
+        "status": "aberto"
+      },
+      "motivo": "Mesmo ID de um registro válido anterior.",
+      "posicao_original": 1
+    }
+  ]
+}
+
+
+Resultados observados
+Contagens lidas do relatório: {"total": 6, "validos": 4, "invalidos": 1, "duplicados": 1}.
