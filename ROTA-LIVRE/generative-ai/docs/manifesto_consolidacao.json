@@ -1,0 +1,317 @@
+[
+  {
+    "origem": "C:\\Generative AI for Engineering\\.gitignore",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\.gitignore",
+    "sha256": "FD24F0A91BE4BBE117ADDE4F9C3292880D7EC84CBE88370E27830B91F7BD5BFB",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\README.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\.rag-local\\backup-etapas-10-13\\independente\\README.md",
+    "sha256": "07B9A953684E55B3006018020476F9A08BB8565ED2361B26372578F79FE2E34B",
+    "sha256_preexistente": "015DF2F7EFB2F642EB448AFB83F33D52563ADD00A3A44BDA00A06DC3A9135A4D",
+    "decisao": "versão independente preservada"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\requirements.txt",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\requirements.txt",
+    "sha256": "3049FBBCBEC453C10A62C1F771D84D4E6E34EC181C39C4EB66EBE860796ED68D",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\agente\\ferramentas.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\agente\\ferramentas.py",
+    "sha256": "CE25BB204A337B24F3CAEF9F1A5D4AC8705D61CB9BDBB0CDA75D767E7259F516",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\analise_comparativa.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\analise_comparativa.md",
+    "sha256": "D2F89BE955D7B23EEC17C9792D98EA1CEBC6371D815113CF8EB3D7B072AA61DA",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\analise_limiar.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\analise_limiar.md",
+    "sha256": "098987676ED76F888A556336E406F33438DD435C1EA5A60F7F4342726D15D0A7",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\auditoria_respostas.jsonl",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\auditoria_respostas.jsonl",
+    "sha256": "8AC2B3AB73F701965A70FF732C7B19B160AFA67FEA3F98A767B87EBD0017E329",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\casos_teste.jsonl",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\casos_teste.jsonl",
+    "sha256": "32898CA73BC88F6E9390176E46F080CDD39A1573D93DA706EE36073A43EE2051",
+    "sha256_preexistente": "32898CA73BC88F6E9390176E46F080CDD39A1573D93DA706EE36073A43EE2051",
+    "decisao": "idêntico"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\cinco_erros_reais.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\cinco_erros_reais.md",
+    "sha256": "83D7076D1212CC5389E28D46AD39B1CFB9F0FD6E8A486A666FAEDE155FA5E978",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\comparacao_configuracoes.json",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\comparacao_configuracoes.json",
+    "sha256": "7EF99CCC236AAD8816F1A1058B77595642073A84D947DD7EACB71FF4932FF075",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\graficos_qualidade.png",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\graficos_qualidade.png",
+    "sha256": "3D8F91F5F8E27BBAD6D1B40B1CBA21C599AC46D22E7B5E94DA7E6F695614B419",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\metricas_qualidade.json",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\metricas_qualidade.json",
+    "sha256": "B35E2BC466A9651C0E05BB1DF50610256DCBFF8FF9822E6A53A193387B042304",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\metricas_recuperacao.csv",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\metricas_recuperacao.csv",
+    "sha256": "48953BEFB5A3A7187D78C1493DD19E54FDB8CBFA0256A24BB44C86C513BAE8DD",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\placar_configuracoes.csv",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\placar_configuracoes.csv",
+    "sha256": "2A126CB9D48553D528A81FCE364C7D0E422233DAFFE4D549A5D75EF21444413C",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\README.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\README.md",
+    "sha256": "B674805E1ECAA10DC4835A6F566AD6395AAE3A072A972660188F4AD90FD8B23B",
+    "sha256_preexistente": "B674805E1ECAA10DC4835A6F566AD6395AAE3A072A972660188F4AD90FD8B23B",
+    "decisao": "idêntico"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\relatorio_etapas_4_a_6.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\relatorio_etapas_4_a_6.md",
+    "sha256": "CCC551B2F8D3B3932FAB6CE390D324A8BA808D6CE6E348063789FA5594F49BFC",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\avaliacao\\resultados_recuperacao.json",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\avaliacao\\resultados_recuperacao.json",
+    "sha256": "57EAEEB6D903B77E3C12DCE7DEA328D944D10FA19CD4FB81AA00620CE57CE119",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\base\\chunks.jsonl",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\base\\chunks.jsonl",
+    "sha256": "D96B730E168E1C4222BED2D64808219C0727E77116B84522CE876C16DE90E222",
+    "sha256_preexistente": "D96B730E168E1C4222BED2D64808219C0727E77116B84522CE876C16DE90E222",
+    "decisao": "idêntico"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\base\\fontes.json",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\base\\fontes.json",
+    "sha256": "B6FF5D936298918DBD8854B192B4E2BEF43ECF7247FF35DE2AB97B65184D54B5",
+    "sha256_preexistente": "B6FF5D936298918DBD8854B192B4E2BEF43ECF7247FF35DE2AB97B65184D54B5",
+    "decisao": "idêntico"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\base\\README.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\base\\README.md",
+    "sha256": "374D2420F8805245C1B0B72B93C8403A62DFF32794FE307DCC81060F53619B7D",
+    "sha256_preexistente": "374D2420F8805245C1B0B72B93C8403A62DFF32794FE307DCC81060F53619B7D",
+    "decisao": "idêntico"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\docs\\01_problema_tarefa.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\.rag-local\\backup-etapas-10-13\\independente\\docs\\01_problema_tarefa.md",
+    "sha256": "2830F732F101EC080E3BC85DEEBE3D7C4DA2BAEB095C19D81735F321AB147989",
+    "sha256_preexistente": "51D3ADAF84CD134BE81F71972568812A52D5D8992EE8866E114EFCB90729CC83",
+    "decisao": "versão independente preservada"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\docs\\03_base_documental.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\docs\\03_base_documental.md",
+    "sha256": "6F404852B48E51927FC85737B1AADBBEFCD35F330B7BAF65C30089C957B43AE9",
+    "sha256_preexistente": "6F404852B48E51927FC85737B1AADBBEFCD35F330B7BAF65C30089C957B43AE9",
+    "decisao": "idêntico"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\docs\\04_busca_rag.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\docs\\04_busca_rag.md",
+    "sha256": "A1920A5DFB3F90256C2785143522F8FC660D24A804D0ACEDE5A2F7BEA014027E",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\docs\\05_geracao_json.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\docs\\05_geracao_json.md",
+    "sha256": "D5595E3BADDABAEC6BFE412B743339EE67D59E6A87350C6E69B5863EB7F3653D",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\docs\\06_agente_especializado.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\docs\\06_agente_especializado.md",
+    "sha256": "8B8EFFEE9CE99F5DD5B389EA55BCC2C9D70CCA30074B14424C005BDB23D35766",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\docs\\07_avaliacao_configuracoes.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\docs\\07_avaliacao_configuracoes.md",
+    "sha256": "14A918EE5F321BD897474BA6633CB32D5140454DCEBE57DF4E67371A5F4ED02F",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\docs\\08_acertos_alucinacoes.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\docs\\08_acertos_alucinacoes.md",
+    "sha256": "511D2E5E90023F23538E427CBD8A13DF7B2AF50806596AA873DEC6660A0B3BA4",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\docs\\09_erros_causas_correcoes.md",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\docs\\09_erros_causas_correcoes.md",
+    "sha256": "AD56FCD5033B6EF685B0BDB9E7A3309BDFABB86E215B92B0C26DA153D0729077",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\llm\\cliente_local.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\llm\\cliente_local.py",
+    "sha256": "47A77CFA2D1C8644529BF61C57203DC386FF66F5546B851E8B97B1319E73E9AC",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\llm\\gerador.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\llm\\gerador.py",
+    "sha256": "8F1BC948D25A4E36BD2DC01999B851D2105FD7BB75774AF9801E8741DC931190",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\llm\\schemas.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\llm\\schemas.py",
+    "sha256": "438E6B4096AE7EF93FCEC4432E4A9C230AC28275A3DE1461C061C38B462068AB",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\rag\\busca.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\rag\\busca.py",
+    "sha256": "24AC0BD95130C33A179091C6A829C924760C7147FEAB8340FA720DD578B624F7",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\rag\\embeddings.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\rag\\embeddings.py",
+    "sha256": "A3162E2BF4E7EC595E89714DB5FD30387E8F40041A9C3E4285115641039B890B",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\rag\\indexador.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\rag\\indexador.py",
+    "sha256": "0526CEEAA9EAE2F9C8678811A95A67A3CE71929F385652CDDBD62A23B408E076",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\scripts\\avaliar_qualidade.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\scripts\\avaliar_qualidade.py",
+    "sha256": "39156759F9689920CB4E278AC149EE945CB4163D53D2A02698EB8D57B18343C8",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\scripts\\avaliar_recuperacao.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\scripts\\avaliar_recuperacao.py",
+    "sha256": "C14A5C7BE3242B314FA9EBE417659FBA5D7640E864BD450B4D7F2DFE10894709",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\scripts\\comparar_configuracoes.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\scripts\\comparar_configuracoes.py",
+    "sha256": "79ECE70B5D0561EF99E5E4BBC8ADE7610ED81906A6BFBB9E5257C796B36875C8",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\scripts\\construir_indice.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\scripts\\construir_indice.py",
+    "sha256": "3970D5F332BC7B7285AB178800D78427A4C0288A18306530AD3A8327BCA42C57",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\scripts\\graficos_qualidade.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\scripts\\graficos_qualidade.py",
+    "sha256": "E988A59CC1E4F48DB637BC0ADF648E39B203ADE011D9A190633C207AC6974932",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\scripts\\testar_geracao.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\scripts\\testar_geracao.py",
+    "sha256": "814DF908B6B909A9982ED5488E69804CB4F80185E51254D52FFF980EE0CCF69A",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\scripts\\validar_base.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\scripts\\validar_base.py",
+    "sha256": "0583152F6E6C1C79C109F84E4DBCE30361542ED5D29D4AC6A2B5D18E7F44DDC5",
+    "sha256_preexistente": "0583152F6E6C1C79C109F84E4DBCE30361542ED5D29D4AC6A2B5D18E7F44DDC5",
+    "decisao": "idêntico"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\tests\\test_avaliacao_qualidade.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\tests\\test_avaliacao_qualidade.py",
+    "sha256": "412E32C261B22861A26CE36FAE0F72080F0AF8038B3FEE256A93140C6F2530F3",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\tests\\test_busca.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\tests\\test_busca.py",
+    "sha256": "62E7ACC70B937BFCC3FDE3F6D8A48661996C04614005F3EC5B0B59F027D58123",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\tests\\test_dataset.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\tests\\test_dataset.py",
+    "sha256": "E962138F065B891555A53AE59B73F129384B2A54D6FED0C40AD7267C78799A94",
+    "sha256_preexistente": "E962138F065B891555A53AE59B73F129384B2A54D6FED0C40AD7267C78799A94",
+    "decisao": "idêntico"
+  },
+  {
+    "origem": "C:\\Generative AI for Engineering\\tests\\test_geracao.py",
+    "destino": "C:\\GSIA\\ROTA-LIVRE\\generative-ai\\tests\\test_geracao.py",
+    "sha256": "DA915EF0D46B0F3E5DE520141DBC1E1BC282CFC666316481DA67B75CC2CF4D3D",
+    "sha256_preexistente": null,
+    "decisao": "copiado"
+  }
+]

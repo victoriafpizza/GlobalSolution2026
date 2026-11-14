@@ -1,0 +1,896 @@
+{
+  "modelo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revisao": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "dimensao": 384,
+  "chunks": 30,
+  "ranking": {
+    "factual": {
+      "k1": {
+        "recall": 0.7222222222222222,
+        "hit": 0.7222222222222222
+      },
+      "k3": {
+        "recall": 0.9444444444444444,
+        "hit": 0.9444444444444444
+      }
+    },
+    "respondível": {
+      "k1": {
+        "recall": 0.75,
+        "hit": 0.75
+      },
+      "k3": {
+        "recall": 0.9166666666666666,
+        "hit": 0.9166666666666666
+      }
+    },
+    "parafrase": {
+      "k1": {
+        "recall": 0.6666666666666666,
+        "hit": 0.6666666666666666
+      },
+      "k3": {
+        "recall": 1.0,
+        "hit": 1
+      }
+    }
+  },
+  "escolhido": {
+    "limiar": 0.4483887553215027,
+    "vp": 18,
+    "fp": 0,
+    "fn": 0,
+    "vn": 6,
+    "rejeicao": 0.25,
+    "erro_balanceado": 0.0
+  },
+  "calibracao": "exploratória",
+  "distribuicao": {
+    "ambigua": {
+      "n": 6,
+      "min": 0.16782736778259277,
+      "mediana": 0.35688045620918274,
+      "max": 0.48776060342788696,
+      "aceitos": 1
+    },
+    "parafrase": {
+      "n": 6,
+      "min": 0.5718717575073242,
+      "mediana": 0.6301319003105164,
+      "max": 0.7801541090011597,
+      "aceitos": 6
+    },
+    "respondível": {
+      "n": 12,
+      "min": 0.4880360960960388,
+      "mediana": 0.7169615626335144,
+      "max": 0.8560655117034912,
+      "aceitos": 12
+    },
+    "sem_evidencia": {
+      "n": 6,
+      "min": 0.256955623626709,
+      "mediana": 0.38004979491233826,
+      "max": 0.40874141454696655,
+      "aceitos": 0
+    }
+  },
+  "casos": [
+    {
+      "id": "qa-001",
+      "pergunta": "O que significa desenho universal segundo a LBI?",
+      "categoria": "respondível",
+      "esperados": [
+        "lbi-01"
+      ],
+      "top": [
+        {
+          "chunk_id": "lbi-10",
+          "source_id": "lbi",
+          "score": 0.587925136089325,
+          "secao_artigo": "Art. 55, caput e §§ 1º e 2º"
+        },
+        {
+          "chunk_id": "lbi-07",
+          "source_id": "lbi",
+          "score": 0.3411322236061096,
+          "secao_artigo": "Art. 48, caput e § 2º"
+        },
+        {
+          "chunk_id": "pnmu-04",
+          "source_id": "pnmu",
+          "score": 0.321389377117157,
+          "secao_artigo": "Art. 5º, I"
+        }
+      ]
+    },
+    {
+      "id": "qa-002",
+      "pergunta": "Em que espaços podem existir barreiras urbanísticas?",
+      "categoria": "respondível",
+      "esperados": [
+        "lbi-02"
+      ],
+      "top": [
+        {
+          "chunk_id": "lbi-02",
+          "source_id": "lbi",
+          "score": 0.8012357354164124,
+          "secao_artigo": "Art. 3º, IV, a"
+        },
+        {
+          "chunk_id": "ace-02",
+          "source_id": "ace",
+          "score": 0.6377061009407043,
+          "secao_artigo": "Art. 5º"
+        },
+        {
+          "chunk_id": "ace-05",
+          "source_id": "ace",
+          "score": 0.5397305488586426,
+          "secao_artigo": "Art. 8º"
+        }
+      ]
+    },
+    {
+      "id": "qa-003",
+      "pergunta": "Cinemas devem ter saídas de emergência acessíveis?",
+      "categoria": "respondível",
+      "esperados": [
+        "lbi-03"
+      ],
+      "top": [
+        {
+          "chunk_id": "lbi-03",
+          "source_id": "lbi",
+          "score": 0.7154589891433716,
+          "secao_artigo": "Art. 44, caput e § 4º"
+        },
+        {
+          "chunk_id": "ace-06",
+          "source_id": "ace",
+          "score": 0.34889864921569824,
+          "secao_artigo": "Art. 9º, caput e parágrafo único"
+        },
+        {
+          "chunk_id": "ace-01",
+          "source_id": "ace",
+          "score": 0.31882739067077637,
+          "secao_artigo": "Art. 4º, caput e parágrafo único"
+        }
+      ]
+    },
+    {
+      "id": "qa-004",
+      "pergunta": "Quais componentes do transporte coletivo a LBI abrange para fins de acessibilidade?",
+      "categoria": "respondível",
+      "esperados": [
+        "lbi-04"
+      ],
+      "top": [
+        {
+          "chunk_id": "lbi-07",
+          "source_id": "lbi",
+          "score": 0.7184641361236572,
+          "secao_artigo": "Art. 48, caput e § 2º"
+        },
+        {
+          "chunk_id": "lbi-04",
+          "source_id": "lbi",
+          "score": 0.6080895662307739,
+          "secao_artigo": "Art. 46, caput e § 1º"
+        },
+        {
+          "chunk_id": "lbi-06",
+          "source_id": "lbi",
+          "score": 0.49086466431617737,
+          "secao_artigo": "Art. 48, caput e § 1º"
+        }
+      ]
+    },
+    {
+      "id": "qa-005",
+      "pergunta": "A credencial para vaga reservada à pessoa com deficiência com comprometimento de mobilidade vale no Brasil todo?",
+      "categoria": "respondível",
+      "esperados": [
+        "lbi-05"
+      ],
+      "top": [
+        {
+          "chunk_id": "lbi-05",
+          "source_id": "lbi",
+          "score": 0.8560655117034912,
+          "secao_artigo": "Art. 47, caput e §§ 2º e 4º"
+        },
+        {
+          "chunk_id": "pnmu-08",
+          "source_id": "pnmu",
+          "score": 0.6237903833389282,
+          "secao_artigo": "Art. 24, caput e IV"
+        },
+        {
+          "chunk_id": "lbi-09",
+          "source_id": "lbi",
+          "score": 0.5960311889648438,
+          "secao_artigo": "Art. 53"
+        }
+      ]
+    },
+    {
+      "id": "qa-006",
+      "pergunta": "Que informações o sistema de comunicação acessível do transporte coletivo deve fornecer?",
+      "categoria": "respondível",
+      "esperados": [
+        "lbi-06"
+      ],
+      "top": [
+        {
+          "chunk_id": "lbi-06",
+          "source_id": "lbi",
+          "score": 0.707872748374939,
+          "secao_artigo": "Art. 48, caput e § 1º"
+        },
+        {
+          "chunk_id": "lbi-04",
+          "source_id": "lbi",
+          "score": 0.6947900652885437,
+          "secao_artigo": "Art. 46, caput e § 1º"
+        },
+        {
+          "chunk_id": "pnmu-07",
+          "source_id": "pnmu",
+          "score": 0.5634899735450745,
+          "secao_artigo": "Art. 15"
+        }
+      ]
+    },
+    {
+      "id": "qa-007",
+      "pergunta": "Quando vou subir ou descer do coletivo, o que a LBI garante à pessoa com deficiência?",
+      "categoria": "parafrase",
+      "esperados": [
+        "lbi-07"
+      ],
+      "top": [
+        {
+          "chunk_id": "lbi-07",
+          "source_id": "lbi",
+          "score": 0.6091996431350708,
+          "secao_artigo": "Art. 48, caput e § 2º"
+        },
+        {
+          "chunk_id": "lbi-09",
+          "source_id": "lbi",
+          "score": 0.5483642816543579,
+          "secao_artigo": "Art. 53"
+        },
+        {
+          "chunk_id": "lbi-05",
+          "source_id": "lbi",
+          "score": 0.5005505084991455,
+          "secao_artigo": "Art. 47, caput e §§ 2º e 4º"
+        }
+      ]
+    },
+    {
+      "id": "qa-008",
+      "pergunta": "Podem cobrar um extra pela corrida de táxi por eu ter deficiência?",
+      "categoria": "parafrase",
+      "esperados": [
+        "lbi-08"
+      ],
+      "top": [
+        {
+          "chunk_id": "lbi-08",
+          "source_id": "lbi",
+          "score": 0.6098557710647583,
+          "secao_artigo": "Art. 51, § 1º"
+        },
+        {
+          "chunk_id": "lbi-05",
+          "source_id": "lbi",
+          "score": 0.5015069246292114,
+          "secao_artigo": "Art. 47, caput e §§ 2º e 4º"
+        },
+        {
+          "chunk_id": "ace-09",
+          "source_id": "ace",
+          "score": 0.408516526222229,
+          "secao_artigo": "Art. 12-A"
+        }
+      ]
+    },
+    {
+      "id": "qa-009",
+      "pergunta": "Qual referência técnica a Lei nº 10.098 indica para o projeto de rampas de uso comunitário?",
+      "categoria": "respondível",
+      "esperados": [
+        "ace-02"
+      ],
+      "top": [
+        {
+          "chunk_id": "ace-02",
+          "source_id": "ace",
+          "score": 0.640312135219574,
+          "secao_artigo": "Art. 5º"
+        },
+        {
+          "chunk_id": "ace-03",
+          "source_id": "ace",
+          "score": 0.47019994258880615,
+          "secao_artigo": "Art. 6º, caput"
+        },
+        {
+          "chunk_id": "ace-01",
+          "source_id": "ace",
+          "score": 0.45119398832321167,
+          "secao_artigo": "Art. 4º, caput e parágrafo único"
+        }
+      ]
+    },
+    {
+      "id": "qa-010",
+      "pergunta": "O que um banheiro de uso público numa praça deve oferecer segundo a Lei nº 10.098?",
+      "categoria": "respondível",
+      "esperados": [
+        "ace-03"
+      ],
+      "top": [
+        {
+          "chunk_id": "ace-03",
+          "source_id": "ace",
+          "score": 0.7020512819290161,
+          "secao_artigo": "Art. 6º, caput"
+        },
+        {
+          "chunk_id": "ace-04",
+          "source_id": "ace",
+          "score": 0.68131422996521,
+          "secao_artigo": "Art. 6º, §§ 1º e 2º"
+        },
+        {
+          "chunk_id": "ace-01",
+          "source_id": "ace",
+          "score": 0.4205172061920166,
+          "secao_artigo": "Art. 4º, caput e parágrafo único"
+        }
+      ]
+    },
+    {
+      "id": "qa-011",
+      "pergunta": "Vai ter banheiro químico no evento. Qual é o mínimo de unidades acessíveis?",
+      "categoria": "parafrase",
+      "esperados": [
+        "ace-04"
+      ],
+      "top": [
+        {
+          "chunk_id": "ace-04",
+          "source_id": "ace",
+          "score": 0.7634509801864624,
+          "secao_artigo": "Art. 6º, §§ 1º e 2º"
+        },
+        {
+          "chunk_id": "ace-03",
+          "source_id": "ace",
+          "score": 0.45127779245376587,
+          "secao_artigo": "Art. 6º, caput"
+        },
+        {
+          "chunk_id": "ace-01",
+          "source_id": "ace",
+          "score": 0.3009018301963806,
+          "secao_artigo": "Art. 4º, caput e parágrafo único"
+        }
+      ]
+    },
+    {
+      "id": "qa-012",
+      "pergunta": "Dá para pôr um poste de sinalização de um jeito que atrapalhe quem passa a pé?",
+      "categoria": "parafrase",
+      "esperados": [
+        "ace-05"
+      ],
+      "top": [
+        {
+          "chunk_id": "ace-07",
+          "source_id": "ace",
+          "score": 0.5718717575073242,
+          "secao_artigo": "Art. 10-A"
+        },
+        {
+          "chunk_id": "ace-05",
+          "source_id": "ace",
+          "score": 0.545011043548584,
+          "secao_artigo": "Art. 8º"
+        },
+        {
+          "chunk_id": "ace-06",
+          "source_id": "ace",
+          "score": 0.44239136576652527,
+          "secao_artigo": "Art. 9º, caput e parágrafo único"
+        }
+      ]
+    },
+    {
+      "id": "qa-013",
+      "pergunta": "Quando a Lei nº 10.098 exige alerta tátil para mobiliário urbano?",
+      "categoria": "respondível",
+      "esperados": [
+        "ace-07"
+      ],
+      "top": [
+        {
+          "chunk_id": "ace-07",
+          "source_id": "ace",
+          "score": 0.4880360960960388,
+          "secao_artigo": "Art. 10-A"
+        },
+        {
+          "chunk_id": "ace-02",
+          "source_id": "ace",
+          "score": 0.48405811190605164,
+          "secao_artigo": "Art. 5º"
+        },
+        {
+          "chunk_id": "ace-06",
+          "source_id": "ace",
+          "score": 0.46717745065689087,
+          "secao_artigo": "Art. 9º, caput e parágrafo único"
+        }
+      ]
+    },
+    {
+      "id": "qa-014",
+      "pergunta": "Se reformarem um prédio de uso coletivo, precisa ter pelo menos uma entrada sem barreiras?",
+      "categoria": "parafrase",
+      "esperados": [
+        "ace-08"
+      ],
+      "top": [
+        {
+          "chunk_id": "ace-08",
+          "source_id": "ace",
+          "score": 0.7801541090011597,
+          "secao_artigo": "Art. 11, caput e parágrafo único, II"
+        },
+        {
+          "chunk_id": "ace-02",
+          "source_id": "ace",
+          "score": 0.5328818559646606,
+          "secao_artigo": "Art. 5º"
+        },
+        {
+          "chunk_id": "ace-03",
+          "source_id": "ace",
+          "score": 0.5285658836364746,
+          "secao_artigo": "Art. 6º, caput"
+        }
+      ]
+    },
+    {
+      "id": "qa-015",
+      "pergunta": "No planejamento da mobilidade, ir a pé fica à frente dos meios motorizados?",
+      "categoria": "parafrase",
+      "esperados": [
+        "pnmu-05"
+      ],
+      "top": [
+        {
+          "chunk_id": "pnmu-10",
+          "source_id": "pnmu",
+          "score": 0.6504080295562744,
+          "secao_artigo": "Art. 24, § 2º"
+        },
+        {
+          "chunk_id": "pnmu-08",
+          "source_id": "pnmu",
+          "score": 0.6371129751205444,
+          "secao_artigo": "Art. 24, caput e IV"
+        },
+        {
+          "chunk_id": "pnmu-05",
+          "source_id": "pnmu",
+          "score": 0.6175767183303833,
+          "secao_artigo": "Art. 6º, II"
+        }
+      ]
+    },
+    {
+      "id": "qa-016",
+      "pergunta": "Quais informações devem ser oferecidas gratuitamente e de forma acessível nos pontos de embarque e desembarque?",
+      "categoria": "respondível",
+      "esperados": [
+        "pnmu-06"
+      ],
+      "top": [
+        {
+          "chunk_id": "pnmu-06",
+          "source_id": "pnmu",
+          "score": 0.741323709487915,
+          "secao_artigo": "Art. 14, caput e III"
+        },
+        {
+          "chunk_id": "lbi-04",
+          "source_id": "lbi",
+          "score": 0.5488085150718689,
+          "secao_artigo": "Art. 46, caput e § 1º"
+        },
+        {
+          "chunk_id": "lbi-07",
+          "source_id": "lbi",
+          "score": 0.4995507001876831,
+          "secao_artigo": "Art. 48, caput e § 2º"
+        }
+      ]
+    },
+    {
+      "id": "qa-017",
+      "pergunta": "Quais instrumentos asseguram a participação da sociedade civil na Política Nacional de Mobilidade Urbana?",
+      "categoria": "respondível",
+      "esperados": [
+        "pnmu-07"
+      ],
+      "top": [
+        {
+          "chunk_id": "pnmu-01",
+          "source_id": "pnmu",
+          "score": 0.8004118204116821,
+          "secao_artigo": "Art. 2º"
+        },
+        {
+          "chunk_id": "pnmu-04",
+          "source_id": "pnmu",
+          "score": 0.7684640288352966,
+          "secao_artigo": "Art. 5º, I"
+        },
+        {
+          "chunk_id": "pnmu-07",
+          "source_id": "pnmu",
+          "score": 0.7528375387191772,
+          "secao_artigo": "Art. 15"
+        }
+      ]
+    },
+    {
+      "id": "qa-018",
+      "pergunta": "O Plano de Mobilidade Urbana precisa contemplar a acessibilidade de quais públicos?",
+      "categoria": "respondível",
+      "esperados": [
+        "pnmu-08"
+      ],
+      "top": [
+        {
+          "chunk_id": "pnmu-08",
+          "source_id": "pnmu",
+          "score": 0.8148401379585266,
+          "secao_artigo": "Art. 24, caput e IV"
+        },
+        {
+          "chunk_id": "pnmu-01",
+          "source_id": "pnmu",
+          "score": 0.800316333770752,
+          "secao_artigo": "Art. 2º"
+        },
+        {
+          "chunk_id": "pnmu-10",
+          "source_id": "pnmu",
+          "score": 0.7972185015678406,
+          "secao_artigo": "Art. 24, § 2º"
+        }
+      ]
+    },
+    {
+      "id": "qa-019",
+      "pergunta": "Essa barreira é de que tipo?",
+      "categoria": "ambigua",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "lbi-02",
+          "source_id": "lbi",
+          "score": 0.35717761516571045,
+          "secao_artigo": "Art. 3º, IV, a"
+        },
+        {
+          "chunk_id": "ace-05",
+          "source_id": "ace",
+          "score": 0.2816247344017029,
+          "secao_artigo": "Art. 8º"
+        },
+        {
+          "chunk_id": "ace-07",
+          "source_id": "ace",
+          "score": 0.2653839588165283,
+          "secao_artigo": "Art. 10-A"
+        }
+      ]
+    },
+    {
+      "id": "qa-020",
+      "pergunta": "Qual é a regra de acesso?",
+      "categoria": "ambigua",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "ace-08",
+          "source_id": "ace",
+          "score": 0.4355747699737549,
+          "secao_artigo": "Art. 11, caput e parágrafo único, II"
+        },
+        {
+          "chunk_id": "pnmu-06",
+          "source_id": "pnmu",
+          "score": 0.433216392993927,
+          "secao_artigo": "Art. 14, caput e III"
+        },
+        {
+          "chunk_id": "lbi-09",
+          "source_id": "lbi",
+          "score": 0.3570406436920166,
+          "secao_artigo": "Art. 53"
+        }
+      ]
+    },
+    {
+      "id": "qa-021",
+      "pergunta": "Tem percentual mínimo?",
+      "categoria": "ambigua",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "ace-04",
+          "source_id": "ace",
+          "score": 0.48776060342788696,
+          "secao_artigo": "Art. 6º, §§ 1º e 2º"
+        },
+        {
+          "chunk_id": "ace-06",
+          "source_id": "ace",
+          "score": 0.2953977882862091,
+          "secao_artigo": "Art. 9º, caput e parágrafo único"
+        },
+        {
+          "chunk_id": "ace-01",
+          "source_id": "ace",
+          "score": 0.26980826258659363,
+          "secao_artigo": "Art. 4º, caput e parágrafo único"
+        }
+      ]
+    },
+    {
+      "id": "qa-022",
+      "pergunta": "Posso usar isso para provar acessibilidade?",
+      "categoria": "ambigua",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "ace-06",
+          "source_id": "ace",
+          "score": 0.35658329725265503,
+          "secao_artigo": "Art. 9º, caput e parágrafo único"
+        },
+        {
+          "chunk_id": "ace-02",
+          "source_id": "ace",
+          "score": 0.3449191749095917,
+          "secao_artigo": "Art. 5º"
+        },
+        {
+          "chunk_id": "ace-07",
+          "source_id": "ace",
+          "score": 0.33712393045425415,
+          "secao_artigo": "Art. 10-A"
+        }
+      ]
+    },
+    {
+      "id": "qa-023",
+      "pergunta": "Consegue me dizer por onde passar aqui agora?",
+      "categoria": "ambigua",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "ace-05",
+          "source_id": "ace",
+          "score": 0.16782736778259277,
+          "secao_artigo": "Art. 8º"
+        },
+        {
+          "chunk_id": "pnmu-02",
+          "source_id": "pnmu",
+          "score": 0.14467528462409973,
+          "secao_artigo": "Art. 3º, § 3º"
+        },
+        {
+          "chunk_id": "lbi-02",
+          "source_id": "lbi",
+          "score": 0.13943931460380554,
+          "secao_artigo": "Art. 3º, IV, a"
+        }
+      ]
+    },
+    {
+      "id": "qa-024",
+      "pergunta": "Você garante que eu consigo passar ali em segurança?",
+      "categoria": "ambigua",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "lbi-07",
+          "source_id": "lbi",
+          "score": 0.3499857485294342,
+          "secao_artigo": "Art. 48, caput e § 2º"
+        },
+        {
+          "chunk_id": "lbi-03",
+          "source_id": "lbi",
+          "score": 0.3438248634338379,
+          "secao_artigo": "Art. 44, caput e § 4º"
+        },
+        {
+          "chunk_id": "lbi-05",
+          "source_id": "lbi",
+          "score": 0.3084964454174042,
+          "secao_artigo": "Art. 47, caput e §§ 2º e 4º"
+        }
+      ]
+    },
+    {
+      "id": "qa-025",
+      "pergunta": "A rampa da entrada principal da Estação da Luz está bloqueada hoje?",
+      "categoria": "sem_evidencia",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "ace-05",
+          "source_id": "ace",
+          "score": 0.37613922357559204,
+          "secao_artigo": "Art. 8º"
+        },
+        {
+          "chunk_id": "lbi-03",
+          "source_id": "lbi",
+          "score": 0.36016976833343506,
+          "secao_artigo": "Art. 44, caput e § 4º"
+        },
+        {
+          "chunk_id": "lbi-02",
+          "source_id": "lbi",
+          "score": 0.30285391211509705,
+          "secao_artigo": "Art. 3º, IV, a"
+        }
+      ]
+    },
+    {
+      "id": "qa-026",
+      "pergunta": "Quantas calçadas com buracos foram registradas em Recife em outubro de 2026?",
+      "categoria": "sem_evidencia",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "ace-07",
+          "source_id": "ace",
+          "score": 0.2867908775806427,
+          "secao_artigo": "Art. 10-A"
+        },
+        {
+          "chunk_id": "ace-02",
+          "source_id": "ace",
+          "score": 0.2829866409301758,
+          "secao_artigo": "Art. 5º"
+        },
+        {
+          "chunk_id": "ace-05",
+          "source_id": "ace",
+          "score": 0.279355525970459,
+          "secao_artigo": "Art. 8º"
+        }
+      ]
+    },
+    {
+      "id": "qa-027",
+      "pergunta": "Qual é a inclinação máxima da rampa de acesso conforme a ABNT NBR 9050?",
+      "categoria": "sem_evidencia",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "lbi-07",
+          "source_id": "lbi",
+          "score": 0.3891344666481018,
+          "secao_artigo": "Art. 48, caput e § 2º"
+        },
+        {
+          "chunk_id": "lbi-04",
+          "source_id": "lbi",
+          "score": 0.3382474482059479,
+          "secao_artigo": "Art. 46, caput e § 1º"
+        },
+        {
+          "chunk_id": "ace-02",
+          "source_id": "ace",
+          "score": 0.3200990557670593,
+          "secao_artigo": "Art. 5º"
+        }
+      ]
+    },
+    {
+      "id": "qa-028",
+      "pergunta": "Qual trajeto acessível liga a Praça da Sé ao Mercado Municipal de São Paulo?",
+      "categoria": "sem_evidencia",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "ace-02",
+          "source_id": "ace",
+          "score": 0.40874141454696655,
+          "secao_artigo": "Art. 5º"
+        },
+        {
+          "chunk_id": "pnmu-03",
+          "source_id": "pnmu",
+          "score": 0.40620869398117065,
+          "secao_artigo": "Art. 4º, II"
+        },
+        {
+          "chunk_id": "lbi-02",
+          "source_id": "lbi",
+          "score": 0.38033419847488403,
+          "secao_artigo": "Art. 3º, IV, a"
+        }
+      ]
+    },
+    {
+      "id": "qa-029",
+      "pergunta": "Qual telefone recebe reclamações de calçadas em Salvador?",
+      "categoria": "sem_evidencia",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "lbi-05",
+          "source_id": "lbi",
+          "score": 0.3839603662490845,
+          "secao_artigo": "Art. 47, caput e §§ 2º e 4º"
+        },
+        {
+          "chunk_id": "ace-07",
+          "source_id": "ace",
+          "score": 0.3761182725429535,
+          "secao_artigo": "Art. 10-A"
+        },
+        {
+          "chunk_id": "ace-06",
+          "source_id": "ace",
+          "score": 0.36332547664642334,
+          "secao_artigo": "Art. 9º, caput e parágrafo único"
+        }
+      ]
+    },
+    {
+      "id": "qa-030",
+      "pergunta": "O elevador da estação Paraíso está funcionando agora?",
+      "categoria": "sem_evidencia",
+      "esperados": [],
+      "top": [
+        {
+          "chunk_id": "lbi-03",
+          "source_id": "lbi",
+          "score": 0.256955623626709,
+          "secao_artigo": "Art. 44, caput e § 4º"
+        },
+        {
+          "chunk_id": "lbi-04",
+          "source_id": "lbi",
+          "score": 0.20081058144569397,
+          "secao_artigo": "Art. 46, caput e § 1º"
+        },
+        {
+          "chunk_id": "ace-07",
+          "source_id": "ace",
+          "score": 0.18289878964424133,
+          "secao_artigo": "Art. 10-A"
+        }
+      ]
+    }
+  ]
+}

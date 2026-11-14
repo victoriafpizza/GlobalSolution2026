@@ -1,0 +1,9 @@
+# Etapa 8 · Critérios da auditoria
+
+Acerto integral inclui respostas factuais que satisfazem o critério, recusas literais adequadas e esclarecimentos úteis. Respostas parciais ficam fora do numerador. O acerto factual e a correspondência com IDs do gabarito usam os casos factuais como denominador. A acurácia de status e a fundamentação pertinente usam todos os casos da categoria ou modo.
+
+Alucinação é uma afirmação factual apresentada como verdadeira sem suporte documental, cuja inadequação foi identificada na revisão. O denominador é o número de saídas com status respondido. A taxa de resposta sem evidência usa o mesmo denominador e mede ausência de suporte textual rastreável, inclusive no baseline. Citações são verificadas por ID, metadados e presença no contexto. A pertinência considera o conteúdo do trecho frente à pergunta, por resposta citada. Um trecho documental real e fora do assunto da pergunta é falha de pertinência. O uso de outro chunk pode ser legítimo se cobrir o critério.
+
+Recusa adequada divide recusas corretas pelos casos que exigem recusa. Recusa indevida divide recusas indevidas pelo total de recusas emitidas. A validade final é reavaliada com Pydantic e usa todas as saídas. A validade interna vem do evento histórico e usa apenas inferências, pois a saída bruta do modelo não foi guardada. A latência usa os tempos registrados e percentis por interpolação linear inclusiva.
+
+A taxonomia distingue resposta correta com ou sem evidência, parcial, incorreta, alucinação, citação inexistente ou impertinente, recusa adequada ou indevida e esclarecimento correto ou incorreto. Erro de validação interna permanece no evento, pois pode coexistir com uma recusa JSON final válida. Caso não resolvido recebe revisão humana pendente. Os julgamentos são documentais e não tiveram segunda revisão independente.

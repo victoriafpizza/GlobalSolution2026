@@ -1,0 +1,1409 @@
+{
+  "historico_sha256": "7ef99ccc236aad8816f1a1058b77595642073a84d947dd7eacb71ff4932ff075",
+  "modelo": "Qwen2.5-0.5B-Instruct Q4_K_M",
+  "revisao": "9217f5db79a29953eb74d5343926648285ec7e67",
+  "modos": {
+    "baseline": {
+      "total": {
+        "status": {
+          "n": 13,
+          "denominador": 30,
+          "percentual": 43.333333333333336
+        },
+        "acerto": {
+          "n": 8,
+          "denominador": 30,
+          "percentual": 26.666666666666668
+        },
+        "factual": {
+          "n": 0,
+          "denominador": 18,
+          "percentual": 0.0
+        },
+        "factual_texto_exato": {
+          "n": 0,
+          "denominador": 18,
+          "percentual": 0.0
+        },
+        "citacao_gabarito": {
+          "n": 0,
+          "denominador": 18,
+          "percentual": 0.0
+        },
+        "citacao_valida": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_pertinente": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "suporte_textual": {
+          "n": 0,
+          "denominador": 30,
+          "percentual": 0.0
+        },
+        "fundamentada": {
+          "n": 0,
+          "denominador": 30,
+          "percentual": 0.0
+        },
+        "alucinacao": {
+          "n": 1,
+          "denominador": 5,
+          "percentual": 20.0
+        },
+        "resposta_sem_evidencia": {
+          "n": 5,
+          "denominador": 5,
+          "percentual": 100.0
+        },
+        "recusa_adequada": {
+          "n": 8,
+          "denominador": 8,
+          "percentual": 100.0
+        },
+        "recusa_indevida": {
+          "n": 17,
+          "denominador": 25,
+          "percentual": 68.0
+        },
+        "json_final": {
+          "n": 30,
+          "denominador": 30,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 29,
+          "denominador": 30,
+          "percentual": 96.66666666666667
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 30,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 30,
+          "media": 1.3170481266669716,
+          "p50": 0.8527403000007325,
+          "p95": 3.256011925002531
+        },
+        "distribuicao": {
+          "parcialmente_correta": 2,
+          "recusa_indevida": 17,
+          "incorreta": 2,
+          "alucinacao_factual": 1,
+          "recusa_correta": 8
+        }
+      },
+      "ambigua": {
+        "status": {
+          "n": 2,
+          "denominador": 6,
+          "percentual": 33.333333333333336
+        },
+        "acerto": {
+          "n": 2,
+          "denominador": 6,
+          "percentual": 33.333333333333336
+        },
+        "factual": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "factual_texto_exato": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_gabarito": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_valida": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_pertinente": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "suporte_textual": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "fundamentada": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_adequada": {
+          "n": 2,
+          "denominador": 2,
+          "percentual": 100.0
+        },
+        "recusa_indevida": {
+          "n": 4,
+          "denominador": 6,
+          "percentual": 66.66666666666667
+        },
+        "json_final": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 6,
+          "media": 0.7213776666673463,
+          "p50": 0.7127029500006756,
+          "p95": 0.8060569000044779
+        },
+        "distribuicao": {
+          "recusa_indevida": 4,
+          "recusa_correta": 2
+        }
+      },
+      "parafrase": {
+        "status": {
+          "n": 2,
+          "denominador": 6,
+          "percentual": 33.333333333333336
+        },
+        "acerto": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "factual": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "factual_texto_exato": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "citacao_gabarito": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "citacao_valida": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_pertinente": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "suporte_textual": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "fundamentada": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "alucinacao": {
+          "n": 1,
+          "denominador": 2,
+          "percentual": 50.0
+        },
+        "resposta_sem_evidencia": {
+          "n": 2,
+          "denominador": 2,
+          "percentual": 100.0
+        },
+        "recusa_adequada": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_indevida": {
+          "n": 4,
+          "denominador": 4,
+          "percentual": 100.0
+        },
+        "json_final": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 6,
+          "media": 1.2295954333336947,
+          "p50": 0.8148056499994709,
+          "p95": 2.7150951250023354
+        },
+        "distribuicao": {
+          "alucinacao_factual": 1,
+          "recusa_indevida": 4,
+          "incorreta": 1
+        }
+      },
+      "respondível": {
+        "status": {
+          "n": 3,
+          "denominador": 12,
+          "percentual": 25.0
+        },
+        "acerto": {
+          "n": 0,
+          "denominador": 12,
+          "percentual": 0.0
+        },
+        "factual": {
+          "n": 0,
+          "denominador": 12,
+          "percentual": 0.0
+        },
+        "factual_texto_exato": {
+          "n": 0,
+          "denominador": 12,
+          "percentual": 0.0
+        },
+        "citacao_gabarito": {
+          "n": 0,
+          "denominador": 12,
+          "percentual": 0.0
+        },
+        "citacao_valida": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_pertinente": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "suporte_textual": {
+          "n": 0,
+          "denominador": 12,
+          "percentual": 0.0
+        },
+        "fundamentada": {
+          "n": 0,
+          "denominador": 12,
+          "percentual": 0.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 3,
+          "percentual": 0.0
+        },
+        "resposta_sem_evidencia": {
+          "n": 3,
+          "denominador": 3,
+          "percentual": 100.0
+        },
+        "recusa_adequada": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_indevida": {
+          "n": 9,
+          "denominador": 9,
+          "percentual": 100.0
+        },
+        "json_final": {
+          "n": 12,
+          "denominador": 12,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 11,
+          "denominador": 12,
+          "percentual": 91.66666666666667
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 12,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 12,
+          "media": 1.8528210083338006,
+          "p50": 1.3104414500012354,
+          "p95": 4.199764614999731
+        },
+        "distribuicao": {
+          "parcialmente_correta": 2,
+          "recusa_indevida": 9,
+          "incorreta": 1
+        }
+      },
+      "sem_evidencia": {
+        "status": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "acerto": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "factual": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "factual_texto_exato": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_gabarito": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_valida": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_pertinente": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "suporte_textual": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "fundamentada": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_adequada": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "recusa_indevida": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "json_final": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 6,
+          "media": 0.9286255166662158,
+          "p50": 0.8364909000010812,
+          "p95": 1.4479369249966112
+        },
+        "distribuicao": {
+          "recusa_correta": 6
+        }
+      }
+    },
+    "rag": {
+      "total": {
+        "status": {
+          "n": 25,
+          "denominador": 30,
+          "percentual": 83.33333333333333
+        },
+        "acerto": {
+          "n": 19,
+          "denominador": 30,
+          "percentual": 63.333333333333336
+        },
+        "factual": {
+          "n": 9,
+          "denominador": 18,
+          "percentual": 50.0
+        },
+        "factual_texto_exato": {
+          "n": 9,
+          "denominador": 18,
+          "percentual": 50.0
+        },
+        "citacao_gabarito": {
+          "n": 9,
+          "denominador": 18,
+          "percentual": 50.0
+        },
+        "citacao_valida": {
+          "n": 13,
+          "denominador": 13,
+          "percentual": 100.0
+        },
+        "citacao_pertinente": {
+          "n": 9,
+          "denominador": 13,
+          "percentual": 69.23076923076923
+        },
+        "suporte_textual": {
+          "n": 13,
+          "denominador": 30,
+          "percentual": 43.333333333333336
+        },
+        "fundamentada": {
+          "n": 9,
+          "denominador": 30,
+          "percentual": 30.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 13,
+          "percentual": 0.0
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 13,
+          "percentual": 0.0
+        },
+        "recusa_adequada": {
+          "n": 8,
+          "denominador": 8,
+          "percentual": 100.0
+        },
+        "recusa_indevida": {
+          "n": 5,
+          "denominador": 13,
+          "percentual": 38.46153846153846
+        },
+        "json_final": {
+          "n": 30,
+          "denominador": 30,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 17,
+          "denominador": 17,
+          "percentual": 100.0
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 30,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 30,
+          "media": 1.413985986665648,
+          "p50": 1.894222949998948,
+          "p95": 2.9497928599987064
+        },
+        "distribuicao": {
+          "citacao_nao_pertinente": 4,
+          "correta_fundamentada": 9,
+          "recusa_indevida": 5,
+          "esclarecimento_correto": 2,
+          "parcialmente_correta": 2,
+          "recusa_correta": 8
+        }
+      },
+      "ambigua": {
+        "status": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "acerto": {
+          "n": 4,
+          "denominador": 6,
+          "percentual": 66.66666666666667
+        },
+        "factual": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "factual_texto_exato": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_gabarito": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_valida": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_pertinente": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "suporte_textual": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "fundamentada": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_adequada": {
+          "n": 2,
+          "denominador": 2,
+          "percentual": 100.0
+        },
+        "recusa_indevida": {
+          "n": 0,
+          "denominador": 2,
+          "percentual": 0.0
+        },
+        "json_final": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 6,
+          "media": 4.591666462753589e-05,
+          "p50": 4.494999666349031e-05,
+          "p95": 5.8874999012914486e-05
+        },
+        "distribuicao": {
+          "esclarecimento_correto": 2,
+          "parcialmente_correta": 2,
+          "recusa_correta": 2
+        }
+      },
+      "parafrase": {
+        "status": {
+          "n": 4,
+          "denominador": 6,
+          "percentual": 66.66666666666667
+        },
+        "acerto": {
+          "n": 3,
+          "denominador": 6,
+          "percentual": 50.0
+        },
+        "factual": {
+          "n": 3,
+          "denominador": 6,
+          "percentual": 50.0
+        },
+        "factual_texto_exato": {
+          "n": 3,
+          "denominador": 6,
+          "percentual": 50.0
+        },
+        "citacao_gabarito": {
+          "n": 3,
+          "denominador": 6,
+          "percentual": 50.0
+        },
+        "citacao_valida": {
+          "n": 4,
+          "denominador": 4,
+          "percentual": 100.0
+        },
+        "citacao_pertinente": {
+          "n": 3,
+          "denominador": 4,
+          "percentual": 75.0
+        },
+        "suporte_textual": {
+          "n": 4,
+          "denominador": 6,
+          "percentual": 66.66666666666667
+        },
+        "fundamentada": {
+          "n": 3,
+          "denominador": 6,
+          "percentual": 50.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 4,
+          "percentual": 0.0
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 4,
+          "percentual": 0.0
+        },
+        "recusa_adequada": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_indevida": {
+          "n": 2,
+          "denominador": 2,
+          "percentual": 100.0
+        },
+        "json_final": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 5,
+          "denominador": 5,
+          "percentual": 100.0
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 6,
+          "media": 2.244968000000275,
+          "p50": 2.3238855999989028,
+          "p95": 3.774005675002627
+        },
+        "distribuicao": {
+          "recusa_indevida": 2,
+          "correta_fundamentada": 3,
+          "citacao_nao_pertinente": 1
+        }
+      },
+      "respondível": {
+        "status": {
+          "n": 9,
+          "denominador": 12,
+          "percentual": 75.0
+        },
+        "acerto": {
+          "n": 6,
+          "denominador": 12,
+          "percentual": 50.0
+        },
+        "factual": {
+          "n": 6,
+          "denominador": 12,
+          "percentual": 50.0
+        },
+        "factual_texto_exato": {
+          "n": 6,
+          "denominador": 12,
+          "percentual": 50.0
+        },
+        "citacao_gabarito": {
+          "n": 6,
+          "denominador": 12,
+          "percentual": 50.0
+        },
+        "citacao_valida": {
+          "n": 9,
+          "denominador": 9,
+          "percentual": 100.0
+        },
+        "citacao_pertinente": {
+          "n": 6,
+          "denominador": 9,
+          "percentual": 66.66666666666667
+        },
+        "suporte_textual": {
+          "n": 9,
+          "denominador": 12,
+          "percentual": 75.0
+        },
+        "fundamentada": {
+          "n": 6,
+          "denominador": 12,
+          "percentual": 50.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 9,
+          "percentual": 0.0
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 9,
+          "percentual": 0.0
+        },
+        "recusa_adequada": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_indevida": {
+          "n": 3,
+          "denominador": 3,
+          "percentual": 100.0
+        },
+        "json_final": {
+          "n": 12,
+          "denominador": 12,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 12,
+          "denominador": 12,
+          "percentual": 100.0
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 12,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 12,
+          "media": 2.412440774998686,
+          "p50": 2.4396661999962816,
+          "p95": 2.897387139998682
+        },
+        "distribuicao": {
+          "citacao_nao_pertinente": 3,
+          "correta_fundamentada": 6,
+          "recusa_indevida": 3
+        }
+      },
+      "sem_evidencia": {
+        "status": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "acerto": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "factual": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "factual_texto_exato": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_gabarito": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_valida": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_pertinente": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "suporte_textual": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "fundamentada": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_adequada": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "recusa_indevida": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "json_final": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 6,
+          "media": 3.4466665965737775e-05,
+          "p50": 2.9850001737941056e-05,
+          "p95": 5.3999996453057975e-05
+        },
+        "distribuicao": {
+          "recusa_correta": 6
+        }
+      }
+    },
+    "agente": {
+      "total": {
+        "status": {
+          "n": 25,
+          "denominador": 30,
+          "percentual": 83.33333333333333
+        },
+        "acerto": {
+          "n": 19,
+          "denominador": 30,
+          "percentual": 63.333333333333336
+        },
+        "factual": {
+          "n": 9,
+          "denominador": 18,
+          "percentual": 50.0
+        },
+        "factual_texto_exato": {
+          "n": 9,
+          "denominador": 18,
+          "percentual": 50.0
+        },
+        "citacao_gabarito": {
+          "n": 9,
+          "denominador": 18,
+          "percentual": 50.0
+        },
+        "citacao_valida": {
+          "n": 13,
+          "denominador": 13,
+          "percentual": 100.0
+        },
+        "citacao_pertinente": {
+          "n": 9,
+          "denominador": 13,
+          "percentual": 69.23076923076923
+        },
+        "suporte_textual": {
+          "n": 13,
+          "denominador": 30,
+          "percentual": 43.333333333333336
+        },
+        "fundamentada": {
+          "n": 9,
+          "denominador": 30,
+          "percentual": 30.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 13,
+          "percentual": 0.0
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 13,
+          "percentual": 0.0
+        },
+        "recusa_adequada": {
+          "n": 8,
+          "denominador": 8,
+          "percentual": 100.0
+        },
+        "recusa_indevida": {
+          "n": 5,
+          "denominador": 13,
+          "percentual": 38.46153846153846
+        },
+        "json_final": {
+          "n": 30,
+          "denominador": 30,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 17,
+          "denominador": 17,
+          "percentual": 100.0
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 30,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 30,
+          "media": 1.3374989233333812,
+          "p50": 1.898782399999618,
+          "p95": 2.8598961549960222
+        },
+        "distribuicao": {
+          "citacao_nao_pertinente": 4,
+          "correta_fundamentada": 9,
+          "recusa_indevida": 5,
+          "esclarecimento_correto": 2,
+          "parcialmente_correta": 2,
+          "recusa_correta": 8
+        }
+      },
+      "ambigua": {
+        "status": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "acerto": {
+          "n": 4,
+          "denominador": 6,
+          "percentual": 66.66666666666667
+        },
+        "factual": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "factual_texto_exato": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_gabarito": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_valida": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_pertinente": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "suporte_textual": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "fundamentada": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_adequada": {
+          "n": 2,
+          "denominador": 2,
+          "percentual": 100.0
+        },
+        "recusa_indevida": {
+          "n": 0,
+          "denominador": 2,
+          "percentual": 0.0
+        },
+        "json_final": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 6,
+          "media": 4.2533332210344575e-05,
+          "p50": 3.7549998523900285e-05,
+          "p95": 5.997500011289958e-05
+        },
+        "distribuicao": {
+          "esclarecimento_correto": 2,
+          "parcialmente_correta": 2,
+          "recusa_correta": 2
+        }
+      },
+      "parafrase": {
+        "status": {
+          "n": 2,
+          "denominador": 6,
+          "percentual": 33.333333333333336
+        },
+        "acerto": {
+          "n": 1,
+          "denominador": 6,
+          "percentual": 16.666666666666668
+        },
+        "factual": {
+          "n": 1,
+          "denominador": 6,
+          "percentual": 16.666666666666668
+        },
+        "factual_texto_exato": {
+          "n": 1,
+          "denominador": 6,
+          "percentual": 16.666666666666668
+        },
+        "citacao_gabarito": {
+          "n": 1,
+          "denominador": 6,
+          "percentual": 16.666666666666668
+        },
+        "citacao_valida": {
+          "n": 2,
+          "denominador": 2,
+          "percentual": 100.0
+        },
+        "citacao_pertinente": {
+          "n": 1,
+          "denominador": 2,
+          "percentual": 50.0
+        },
+        "suporte_textual": {
+          "n": 2,
+          "denominador": 6,
+          "percentual": 33.333333333333336
+        },
+        "fundamentada": {
+          "n": 1,
+          "denominador": 6,
+          "percentual": 16.666666666666668
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 2,
+          "percentual": 0.0
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 2,
+          "percentual": 0.0
+        },
+        "recusa_adequada": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_indevida": {
+          "n": 4,
+          "denominador": 4,
+          "percentual": 100.0
+        },
+        "json_final": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 5,
+          "denominador": 5,
+          "percentual": 100.0
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 6,
+          "media": 1.8489701333334476,
+          "p50": 2.0571064000032493,
+          "p95": 2.707351299997754
+        },
+        "distribuicao": {
+          "recusa_indevida": 4,
+          "correta_fundamentada": 1,
+          "citacao_nao_pertinente": 1
+        }
+      },
+      "respondível": {
+        "status": {
+          "n": 11,
+          "denominador": 12,
+          "percentual": 91.66666666666667
+        },
+        "acerto": {
+          "n": 8,
+          "denominador": 12,
+          "percentual": 66.66666666666667
+        },
+        "factual": {
+          "n": 8,
+          "denominador": 12,
+          "percentual": 66.66666666666667
+        },
+        "factual_texto_exato": {
+          "n": 8,
+          "denominador": 12,
+          "percentual": 66.66666666666667
+        },
+        "citacao_gabarito": {
+          "n": 8,
+          "denominador": 12,
+          "percentual": 66.66666666666667
+        },
+        "citacao_valida": {
+          "n": 11,
+          "denominador": 11,
+          "percentual": 100.0
+        },
+        "citacao_pertinente": {
+          "n": 8,
+          "denominador": 11,
+          "percentual": 72.72727272727273
+        },
+        "suporte_textual": {
+          "n": 11,
+          "denominador": 12,
+          "percentual": 91.66666666666667
+        },
+        "fundamentada": {
+          "n": 8,
+          "denominador": 12,
+          "percentual": 66.66666666666667
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 11,
+          "percentual": 0.0
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 11,
+          "percentual": 0.0
+        },
+        "recusa_adequada": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_indevida": {
+          "n": 1,
+          "denominador": 1,
+          "percentual": 100.0
+        },
+        "json_final": {
+          "n": 12,
+          "denominador": 12,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 12,
+          "denominador": 12,
+          "percentual": 100.0
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 12,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 12,
+          "media": 2.419223458333969,
+          "p50": 2.461146200002986,
+          "p95": 2.875876529996458
+        },
+        "distribuicao": {
+          "citacao_nao_pertinente": 3,
+          "correta_fundamentada": 8,
+          "recusa_indevida": 1
+        }
+      },
+      "sem_evidencia": {
+        "status": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "acerto": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "factual": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "factual_texto_exato": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_gabarito": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_valida": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "citacao_pertinente": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "suporte_textual": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "fundamentada": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "alucinacao": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "resposta_sem_evidencia": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "recusa_adequada": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "recusa_indevida": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "json_final": {
+          "n": 6,
+          "denominador": 6,
+          "percentual": 100.0
+        },
+        "json_modelo": {
+          "n": 0,
+          "denominador": 0,
+          "percentual": null
+        },
+        "revisao_pendente": {
+          "n": 0,
+          "denominador": 6,
+          "percentual": 0.0
+        },
+        "latencia_s": {
+          "n": 6,
+          "media": 3.503333330930521e-05,
+          "p50": 3.6649998946813866e-05,
+          "p95": 4.0225000702776015e-05
+        },
+        "distribuicao": {
+          "recusa_correta": 6
+        }
+      }
+    }
+  }
+}

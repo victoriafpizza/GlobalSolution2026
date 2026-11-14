@@ -1,0 +1,3033 @@
+{
+  "modelo": "Qwen2.5-0.5B-Instruct Q4_K_M",
+  "revisao": "9217f5db79a29953eb74d5343926648285ec7e67",
+  "modos": {
+    "baseline": {
+      "n": 30,
+      "acuracia_status": 0.43333333333333335,
+      "acerto_textual_factual": 0,
+      "citacao_gabarito_factual": 0,
+      "fundamentadas": 0,
+      "recusa_adequada": 1,
+      "latencia_media_s": 1.3170481266669716,
+      "inferencias": 30,
+      "json_modelo_validos": 29,
+      "erros": 1,
+      "casos": [
+        {
+          "id": "qa-001",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "O que significa desenho universal segundo a LBI?",
+            "resposta": "O desenho universal é uma abordagem que visa garantir que todos possam acessar e entender o design urbano de maneira igual. Essa abordagem é fundamental para garantir que a comunidade urbana seja inclusiva e acessível para todos.",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "27e629b0842741509fec4a7d64aeb04f",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 1.541769600000407
+          }
+        },
+        {
+          "id": "qa-002",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Em que espaços podem existir barreiras urbanísticas?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "7d3c96603f3048ca80c63f9d99d16d67",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.6745969999974477
+          }
+        },
+        {
+          "id": "qa-003",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Cinemas devem ter saídas de emergência acessíveis?",
+            "resposta": "Cinemas devem ter saídas de emergência acessíveis. Essa medida é essencial para garantir a segurança e a saúde dos usuários. As saídas de emergência devem ser feitas de maneira segura e eficiente, garantindo que todos os usuários possam se mover de forma segura e confortável. Além disso, a segurança é crucial para a continuidade do esporte e para a manutenção da qualidade do esporte. As pessoas devem ser informadas sobre as saídas de emergência e as regras de segurança para garantir que todos os usuários se sinta-ão confortáveis e seguros.",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "6dd2b42821e34e39b134635a3d55e7a3",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.681244699997478
+          }
+        },
+        {
+          "id": "qa-004",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quais componentes do transporte coletivo a LBI abrange para fins de acessibilidade?",
+            "resposta": "Quais componentes do transporte coletivo a LBI abrange para fins de acessibilidade?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "80adb93ee98f4709b08007167d5ea794",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 1.0791133000020636
+          }
+        },
+        {
+          "id": "qa-005",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "A credencial para vaga reservada à pessoa com deficiência com comprometimento de mobilidade vale no Brasil todo?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "3a740f8724154c1cb17910876b744615",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 3.2266411000018707
+          }
+        },
+        {
+          "id": "qa-006",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Que informações o sistema de comunicação acessível do transporte coletivo deve fornecer?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "fd383a05adf54761bed31f836247e9b9",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": "ValidationError",
+            "inferencias": 1,
+            "json_modelo_valido": false,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 5.3891377999971155
+          }
+        },
+        {
+          "id": "qa-007",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quando vou subir ou descer do coletivo, o que a LBI garante à pessoa com deficiência?",
+            "resposta": "Quando você subir ou descer do coletivo, o que a LBI garante à pessoa com deficiência? A LBI garante que você não perde sua posição ou sua função, mas sim sua direção. Isso significa que você pode continuar sua jornada de forma segura e equitativa, mesmo que você esteja com deficiência. Além disso, a LBI garante que você não perde sua segurança, mas sim sua segurança e conforto. Isso significa que você pode continuar sua jornada de forma segura e confortável, mesmo que você esteja com deficiência. Além disso, a LBI garante que você não perde sua autonomia, mas sim sua autonomia e liberdade. Isso significa que você pode continuar sua jornada de forma segura e liberdade, mesmo que você esteja com deficiência.",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "e58899990cb245e790901cfb8df83d1f",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 3.280042600003071
+          }
+        },
+        {
+          "id": "qa-008",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Podem cobrar um extra pela corrida de táxi por eu ter deficiência?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "187ed4db99314c12a03e35e00aeb2049",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.6848757000043406
+          }
+        },
+        {
+          "id": "qa-009",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual referência técnica a Lei nº 10.098 indica para o projeto de rampas de uso comunitário?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "68f8a36de68244fe8fb9f66d9925e864",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 1.7751137999948696
+          }
+        },
+        {
+          "id": "qa-010",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "O que um banheiro de uso público numa praça deve oferecer segundo a Lei nº 10.098?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "f7b4ba551a1145208418b3d26ec58971",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 2.2320535000035306
+          }
+        },
+        {
+          "id": "qa-011",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Vai ter banheiro químico no evento. Qual é o mínimo de unidades acessíveis?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "d2215e2873e64d27b247cad682e85879",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.7627902999956859
+          }
+        },
+        {
+          "id": "qa-012",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Dá para pôr um poste de sinalização de um jeito que atrapalhe quem passa a pé?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "dc3c0ac1f42b4335bda29e298309d1f1",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.8256335999976727
+          }
+        },
+        {
+          "id": "qa-013",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Quando a Lei nº 10.098 exige alerta tátil para mobiliário urbano?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "072eddf1f5a3471eb3cf6f34e597eb5f",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.8798470000037923
+          }
+        },
+        {
+          "id": "qa-014",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Se reformarem um prédio de uso coletivo, precisa ter pelo menos uma entrada sem barreiras?",
+            "resposta": "Se reformarem um prédio de uso coletivo, precisa ter pelo menos uma entrada sem barreiras?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "29e485780d834eaeaf3f168bb1b7ebca",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 1.0202527000001282
+          }
+        },
+        {
+          "id": "qa-015",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "No planejamento da mobilidade, ir a pé fica à frente dos meios motorizados?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "56c88fc17d0948b58552c95ff60fbb16",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.8039777000012691
+          }
+        },
+        {
+          "id": "qa-016",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Quais informações devem ser oferecidas gratuitamente e de forma acessível nos pontos de embarque e desembarque?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "bdc2e77b40b24db9922c7ea968909988",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 1.057907200003683
+          }
+        },
+        {
+          "id": "qa-017",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Quais instrumentos asseguram a participação da sociedade civil na Política Nacional de Mobilidade Urbana?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "7c71b7104237404c8be2e8b13f0da2d4",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.9588487000000896
+          }
+        },
+        {
+          "id": "qa-018",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "O Plano de Mobilidade Urbana precisa contemplar a acessibilidade de quais públicos?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "eaef53c716d3407cbe08ab1a4b7b8161",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.7375784000032581
+          }
+        },
+        {
+          "id": "qa-019",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Essa barreira é de que tipo?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "7260a19b5bbf438fa03f25d92a5b288b",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.6886213000034331
+          }
+        },
+        {
+          "id": "qa-020",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual é a regra de acesso?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "45de5ac996024b75a51516dfc8add095",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.7367845999979181
+          }
+        },
+        {
+          "id": "qa-021",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Tem percentual mínimo?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "0808f384dd324c0da47c8bd4a9344351",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.6702617999981157
+          }
+        },
+        {
+          "id": "qa-022",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Posso usar isso para provar acessibilidade?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "6153a3a5d84d4c46bf59a40d51dd04ba",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.8214186000041082
+          }
+        },
+        {
+          "id": "qa-023",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Consegue me dizer por onde passar aqui agora?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "8db1c8f32155439696503c41b6cb73b5",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.7599718000055873
+          }
+        },
+        {
+          "id": "qa-024",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Você garante que eu consigo passar ali em segurança?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "88a7978d03fb4dc9b5b64c68fc39aa7c",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.6512078999949154
+          }
+        },
+        {
+          "id": "qa-025",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "A rampa da entrada principal da Estação da Luz está bloqueada hoje?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "d2abdca77cc34c3596d0dd0648f59849",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.8962864999994054
+          }
+        },
+        {
+          "id": "qa-026",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Quantas calçadas com buracos foram registradas em Recife em outubro de 2026?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "1af9ba19fdb549e18877154ccf96e202",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 1.6109703999973135
+          }
+        },
+        {
+          "id": "qa-027",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual é a inclinação máxima da rampa de acesso conforme a ABNT NBR 9050?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "9cee5c51f08d4b6ead294a14e45c8a91",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.9588364999945043
+          }
+        },
+        {
+          "id": "qa-028",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual trajeto acessível liga a Praça da Sé ao Mercado Municipal de São Paulo?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "4d9d0e9c630849e6afdf3d14c0a0bd1c",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.776695300002757
+          }
+        },
+        {
+          "id": "qa-029",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual telefone recebe reclamações de calçadas em Salvador?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "5bd860f060e3442297aced648e244054",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.6620081000000937
+          }
+        },
+        {
+          "id": "qa-030",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "O elevador da estação Paraíso está funcionando agora?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "9f3ce87774d946f3bc490297b28e75c9",
+            "modo": "baseline",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 0.6669563000032213
+          }
+        }
+      ]
+    },
+    "rag": {
+      "n": 30,
+      "acuracia_status": 0.8333333333333334,
+      "acerto_textual_factual": 0.5,
+      "citacao_gabarito_factual": 0.5,
+      "fundamentadas": 13,
+      "recusa_adequada": 1,
+      "latencia_media_s": 1.413985986665648,
+      "inferencias": 17,
+      "json_modelo_validos": 17,
+      "erros": 2,
+      "casos": [
+        {
+          "id": "qa-001",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "O que significa desenho universal segundo a LBI?",
+            "resposta": "Nos projetos abrangidos pelo art. 55, como os de meio físico e transporte, o desenho universal é a regra geral. Quando comprovadamente inviável, deve-se adotar adaptação razoável.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-10",
+                "source_id": "lbi",
+                "titulo": "Adaptação razoável em projetos",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "4c65cb2a17ad4fb9ad66b548978f4594",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "lbi-10"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 1.6764456999953836
+          }
+        },
+        {
+          "id": "qa-002",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Em que espaços podem existir barreiras urbanísticas?",
+            "resposta": "As barreiras urbanísticas são aquelas em vias e em espaços públicos ou privados abertos ao público ou de uso coletivo.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-02",
+                "source_id": "lbi",
+                "titulo": "Barreiras urbanísticas",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "56dae276305547f4a6cec813b6017826",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "lbi-02",
+              "ace-02",
+              "ace-05"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.2448576999959187
+          }
+        },
+        {
+          "id": "qa-003",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Cinemas devem ter saídas de emergência acessíveis?",
+            "resposta": "Cinemas, teatros, auditórios, estádios, ginásios e locais de espetáculos, conferências e similares devem ter rotas de fuga e saídas de emergência acessíveis, conforme as normas de acessibilidade.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-03",
+                "source_id": "lbi",
+                "titulo": "Saídas de emergência",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "76bbabe0c5ac4dde9356cd1ce7ec85cf",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "lbi-03"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 1.9250346999979229
+          }
+        },
+        {
+          "id": "qa-004",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quais componentes do transporte coletivo a LBI abrange para fins de acessibilidade?",
+            "resposta": "A LBI assegura à pessoa com deficiência prioridade e segurança no embarque e desembarque do transporte coletivo, conforme as normas técnicas.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-07",
+                "source_id": "lbi",
+                "titulo": "Embarque e desembarque",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "0de4005ef8764db0998fdc9b137ef51c",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "lbi-07",
+              "lbi-04",
+              "lbi-06"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.4353730999937397
+          }
+        },
+        {
+          "id": "qa-005",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "A credencial para vaga reservada à pessoa com deficiência com comprometimento de mobilidade vale no Brasil todo?",
+            "resposta": "A credencial é vinculada à pessoa com deficiência com comprometimento de mobilidade, vale em todo o Brasil e deve ficar visível no veículo quando estacionado em vaga reservada.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-05",
+                "source_id": "lbi",
+                "titulo": "Credencial de estacionamento",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "018dfe7290c64996ac519cfc863bfe9f",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "lbi-05",
+              "pnmu-08",
+              "lbi-09"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.5122582000039984
+          }
+        },
+        {
+          "id": "qa-006",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Que informações o sistema de comunicação acessível do transporte coletivo deve fornecer?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "7ae2e3b4c65d4c00a993b437f4b65ea9",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "lbi-06",
+              "lbi-04",
+              "pnmu-07"
+            ],
+            "erro": "suporte_textual_ou_citacao_invalida",
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 2.814367899998615
+          }
+        },
+        {
+          "id": "qa-007",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Quando vou subir ou descer do coletivo, o que a LBI garante à pessoa com deficiência?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "a6ac16ad536e46e994346e14638914c9",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 6.610000127693638e-05
+          }
+        },
+        {
+          "id": "qa-008",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Podem cobrar um extra pela corrida de táxi por eu ter deficiência?",
+            "resposta": "A lei proíbe tarifas diferenciadas ou cobranças adicionais pelo serviço de táxi prestado à pessoa com deficiência.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-08",
+                "source_id": "lbi",
+                "titulo": "Cobrança no táxi",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "7fda29a625e84a45a2af7b2ab8387a36",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "lbi-08",
+              "lbi-05"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 1.8634111999999732
+          }
+        },
+        {
+          "id": "qa-009",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Qual referência técnica a Lei nº 10.098 indica para o projeto de rampas de uso comunitário?",
+            "resposta": "Projetos e traçados de elementos de urbanização públicos e privados de uso comunitário, como passagens de pedestres, escadas e rampas, devem seguir os parâmetros das normas técnicas de acessibilidade da ABNT.",
+            "citacoes": [
+              {
+                "chunk_id": "ace-02",
+                "source_id": "ace",
+                "titulo": "Projetos de rampas e passagens",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "e02a9a3f4c874fb68d32cc8354cb7ebc",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "ace-02",
+              "ace-03",
+              "ace-01"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.9988550999987638
+          }
+        },
+        {
+          "id": "qa-010",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "O que um banheiro de uso público numa praça deve oferecer segundo a Lei nº 10.098?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "3287a271b1734312869b7193d862fc14",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "ace-03",
+              "ace-04"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 2.4439592999988236
+          }
+        },
+        {
+          "id": "qa-011",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Vai ter banheiro químico no evento. Qual é o mínimo de unidades acessíveis?",
+            "resposta": "Eventos em espaços públicos ou privados com banheiros químicos devem oferecer unidades acessíveis. O mínimo é 10% do total, com pelo menos uma unidade acessível quando o percentual resultar em fração menor que um.",
+            "citacoes": [
+              {
+                "chunk_id": "ace-04",
+                "source_id": "ace",
+                "titulo": "Banheiros químicos em eventos",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "9ee136a125ce49359e74e79919a1d6ee",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "ace-04",
+              "ace-03"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 4.068731600003957
+          }
+        },
+        {
+          "id": "qa-012",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Dá para pôr um poste de sinalização de um jeito que atrapalhe quem passa a pé?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "7185f94fb93e4a66ae0d9485dea002b8",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "ace-07",
+              "ace-05"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 2.1448081999988062
+          }
+        },
+        {
+          "id": "qa-013",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quando a Lei nº 10.098 exige alerta tátil para mobiliário urbano?",
+            "resposta": "Mobiliário instalado em área comum de circulação de pedestres que ofereça risco de acidente à pessoa com deficiência exige sinalização tátil de alerta no piso, conforme as normas técnicas.",
+            "citacoes": [
+              {
+                "chunk_id": "ace-07",
+                "source_id": "ace",
+                "titulo": "Alerta tátil para mobiliário",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "44f26f5614644872887ecf069b281eed",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "ace-07",
+              "ace-02",
+              "ace-06"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.7946582000004128
+          }
+        },
+        {
+          "id": "qa-014",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Se reformarem um prédio de uso coletivo, precisa ter pelo menos uma entrada sem barreiras?",
+            "resposta": "Na construção, ampliação ou reforma de edifício público ou privado de uso coletivo, pelo menos uma entrada deve permitir acesso ao interior sem barreiras arquitetônicas ou obstáculos à pessoa com deficiência ou com mobilidade reduzida.",
+            "citacoes": [
+              {
+                "chunk_id": "ace-08",
+                "source_id": "ace",
+                "titulo": "Entradas de edifícios de uso coletivo",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "27f1d5c1acb148ff96fa0de44b60c1f3",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "ace-08",
+              "ace-02",
+              "ace-03"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.889827899998636
+          }
+        },
+        {
+          "id": "qa-015",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "No planejamento da mobilidade, ir a pé fica à frente dos meios motorizados?",
+            "resposta": "Em municípios sem sistema de transporte público coletivo ou individual, o Plano de Mobilidade Urbana deve focar no transporte não motorizado e na infraestrutura para deslocamentos a pé e de bicicleta, conforme a legislação vigente.",
+            "citacoes": [
+              {
+                "chunk_id": "pnmu-10",
+                "source_id": "pnmu",
+                "titulo": "Municípios sem transporte público",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2012/lei-12587-3-janeiro-2012-612248-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "a42ef87a35ed40178730e530ae896c8e",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "pnmu-10",
+              "pnmu-08",
+              "pnmu-05"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.5029629999989993
+          }
+        },
+        {
+          "id": "qa-016",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quais informações devem ser oferecidas gratuitamente e de forma acessível nos pontos de embarque e desembarque?",
+            "resposta": "Nos pontos de embarque e desembarque, usuários têm direito a informação gratuita e acessível sobre itinerários, horários, tarifas e conexões com outros modos de transporte.",
+            "citacoes": [
+              {
+                "chunk_id": "pnmu-06",
+                "source_id": "pnmu",
+                "titulo": "Informação nos pontos de embarque",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2012/lei-12587-3-janeiro-2012-612248-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "7a58d9dcd1394b6e94d148a4549de44a",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "pnmu-06",
+              "lbi-04",
+              "lbi-07"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.5856582000051276
+          }
+        },
+        {
+          "id": "qa-017",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quais instrumentos asseguram a participação da sociedade civil na Política Nacional de Mobilidade Urbana?",
+            "resposta": "A Política Nacional de Mobilidade Urbana busca contribuir para o acesso universal à cidade por meio do planejamento e da gestão democrática do Sistema Nacional de Mobilidade Urbana.",
+            "citacoes": [
+              {
+                "chunk_id": "pnmu-01",
+                "source_id": "pnmu",
+                "titulo": "Acesso universal à cidade",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2012/lei-12587-3-janeiro-2012-612248-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "1aef7d90df594f7184fceffbb52a1551",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "pnmu-01",
+              "pnmu-04",
+              "pnmu-07"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 1,
+            "segundos": 2.333275199998752
+          }
+        },
+        {
+          "id": "qa-018",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "O Plano de Mobilidade Urbana precisa contemplar a acessibilidade de quais públicos?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "0c489b1f30e345569e0c675771f4bff8",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [
+              "pnmu-08",
+              "pnmu-01",
+              "pnmu-10"
+            ],
+            "erro": "suporte_textual_ou_citacao_invalida",
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 1,
+            "segundos": 2.1845459999967716
+          }
+        },
+        {
+          "id": "qa-019",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "esclarecimento_necessario",
+            "pergunta": "Essa barreira é de que tipo?",
+            "resposta": "A qual local, situação ou requisito de acessibilidade você se refere?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "146497a455aa45a2b6a9bfcc9cbd4f20",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "esclarecimento_necessario",
+            "passos": 0,
+            "segundos": 4.629999602911994e-05
+          }
+        },
+        {
+          "id": "qa-020",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "esclarecimento_necessario",
+            "pergunta": "Qual é a regra de acesso?",
+            "resposta": "A qual local, situação ou requisito de acessibilidade você se refere?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "c6a8cb3938264ae68556a85e3af1ea44",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "esclarecimento_necessario",
+            "passos": 0,
+            "segundos": 5.909999890718609e-05
+          }
+        },
+        {
+          "id": "qa-021",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "esclarecimento_necessario",
+            "pergunta": "Tem percentual mínimo?",
+            "resposta": "A qual local, situação ou requisito de acessibilidade você se refere?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "fc7c96773d8e4e57a024138f4093f91e",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "esclarecimento_necessario",
+            "passos": 0,
+            "segundos": 4.359999729786068e-05
+          }
+        },
+        {
+          "id": "qa-022",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "esclarecimento_necessario",
+            "pergunta": "Posso usar isso para provar acessibilidade?",
+            "resposta": "A qual local, situação ou requisito de acessibilidade você se refere?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "2f7691171acf46119277869506bbcd6f",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "esclarecimento_necessario",
+            "passos": 0,
+            "segundos": 3.68999972124584e-05
+          }
+        },
+        {
+          "id": "qa-023",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Consegue me dizer por onde passar aqui agora?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "a0d52322629d4829955444e2a9669723",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 3.139999898849055e-05
+          }
+        },
+        {
+          "id": "qa-024",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Você garante que eu consigo passar ali em segurança?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "7156018ba18f4b69af16dbf62788c6f5",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 5.819999933009967e-05
+          }
+        },
+        {
+          "id": "qa-025",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "A rampa da entrada principal da Estação da Luz está bloqueada hoje?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "f4257bcc10104444b3c0b8fa7b37254a",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 5.96999961999245e-05
+          }
+        },
+        {
+          "id": "qa-026",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Quantas calçadas com buracos foram registradas em Recife em outubro de 2026?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "41a75a1e49c84a22936b82429dd77ab3",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 2.5800000003073364e-05
+          }
+        },
+        {
+          "id": "qa-027",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual é a inclinação máxima da rampa de acesso conforme a ABNT NBR 9050?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "381a05c320404687b631c377073b43b9",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 3.0499999411404133e-05
+          }
+        },
+        {
+          "id": "qa-028",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual trajeto acessível liga a Praça da Sé ao Mercado Municipal de São Paulo?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "874549ca43864369bdee82267181525d",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 2.920000406447798e-05
+          }
+        },
+        {
+          "id": "qa-029",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual telefone recebe reclamações de calçadas em Salvador?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "766f929eaa994705907b726c62c5c9a5",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 2.469999890308827e-05
+          }
+        },
+        {
+          "id": "qa-030",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "O elevador da estação Paraíso está funcionando agora?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "23ca0969f5f74b7abcc9bdb77bf0249a",
+            "modo": "rag",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 3.68999972124584e-05
+          }
+        }
+      ]
+    },
+    "agente": {
+      "n": 30,
+      "acuracia_status": 0.8333333333333334,
+      "acerto_textual_factual": 0.5,
+      "citacao_gabarito_factual": 0.5,
+      "fundamentadas": 13,
+      "recusa_adequada": 1,
+      "latencia_media_s": 1.3374989233333812,
+      "inferencias": 17,
+      "json_modelo_validos": 17,
+      "erros": 2,
+      "casos": [
+        {
+          "id": "qa-001",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "O que significa desenho universal segundo a LBI?",
+            "resposta": "Nos projetos abrangidos pelo art. 55, como os de meio físico e transporte, o desenho universal é a regra geral. Quando comprovadamente inviável, deve-se adotar adaptação razoável.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-10",
+                "source_id": "lbi",
+                "titulo": "Adaptação razoável em projetos",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "d27e62787e5b4b39b7e5db8afa878cce",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "lbi-10"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 1.8947886000023573
+          }
+        },
+        {
+          "id": "qa-002",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Em que espaços podem existir barreiras urbanísticas?",
+            "resposta": "As barreiras urbanísticas são aquelas em vias e em espaços públicos ou privados abertos ao público ou de uso coletivo.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-02",
+                "source_id": "lbi",
+                "titulo": "Barreiras urbanísticas",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "72e0be06b7e94a9e8bf18b05a845333c",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "lbi-02",
+              "ace-02",
+              "ace-05"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.2016905000054976
+          }
+        },
+        {
+          "id": "qa-003",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Cinemas devem ter saídas de emergência acessíveis?",
+            "resposta": "Cinemas, teatros, auditórios, estádios, ginásios e locais de espetáculos, conferências e similares devem ter rotas de fuga e saídas de emergência acessíveis, conforme as normas de acessibilidade.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-03",
+                "source_id": "lbi",
+                "titulo": "Saídas de emergência",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "88a68e312b6041f1b6a9e22c3200083a",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "lbi-03"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.0518607000049087
+          }
+        },
+        {
+          "id": "qa-004",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quais componentes do transporte coletivo a LBI abrange para fins de acessibilidade?",
+            "resposta": "A LBI assegura à pessoa com deficiência prioridade e segurança no embarque e desembarque do transporte coletivo, conforme as normas técnicas.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-07",
+                "source_id": "lbi",
+                "titulo": "Embarque e desembarque",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "598e6fb9296b47fa9368fec4b3c1b261",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "lbi-07",
+              "lbi-04",
+              "lbi-06"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.4886479999986477
+          }
+        },
+        {
+          "id": "qa-005",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "A credencial para vaga reservada à pessoa com deficiência com comprometimento de mobilidade vale no Brasil todo?",
+            "resposta": "A credencial é vinculada à pessoa com deficiência com comprometimento de mobilidade, vale em todo o Brasil e deve ficar visível no veículo quando estacionado em vaga reservada.",
+            "citacoes": [
+              {
+                "chunk_id": "lbi-05",
+                "source_id": "lbi",
+                "titulo": "Credencial de estacionamento",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "cba6422d635340019bd1bfce3b3f92d9",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "lbi-05",
+              "pnmu-08",
+              "lbi-09"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.4631775000016205
+          }
+        },
+        {
+          "id": "qa-006",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Que informações o sistema de comunicação acessível do transporte coletivo deve fornecer?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "061aeff312d84de99c5afe306cff1acc",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos"
+            ],
+            "chunks": [
+              "lbi-06",
+              "lbi-04",
+              "pnmu-07"
+            ],
+            "erro": "suporte_textual_ou_citacao_invalida",
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 2,
+            "segundos": 2.8222859000015887
+          }
+        },
+        {
+          "id": "qa-007",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Quando vou subir ou descer do coletivo, o que a LBI garante à pessoa com deficiência?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "c4a1fea0b87d4ee5b94293a34802495c",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 7.79999973019585e-05
+          }
+        },
+        {
+          "id": "qa-008",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Podem cobrar um extra pela corrida de táxi por eu ter deficiência?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "5a74df59f8414d61a97112680ed93ea6",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos"
+            ],
+            "chunks": [
+              "lbi-08",
+              "lbi-05"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 2,
+            "segundos": 1.9027761999968789
+          }
+        },
+        {
+          "id": "qa-009",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Qual referência técnica a Lei nº 10.098 indica para o projeto de rampas de uso comunitário?",
+            "resposta": "Projetos e traçados de elementos de urbanização públicos e privados de uso comunitário, como passagens de pedestres, escadas e rampas, devem seguir os parâmetros das normas técnicas de acessibilidade da ABNT.",
+            "citacoes": [
+              {
+                "chunk_id": "ace-02",
+                "source_id": "ace",
+                "titulo": "Projetos de rampas e passagens",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "825fa4f8be1442edbcc1f9cfed7cc04a",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "ace-02",
+              "ace-03",
+              "ace-01"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.9199509999962174
+          }
+        },
+        {
+          "id": "qa-010",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "O que um banheiro de uso público numa praça deve oferecer segundo a Lei nº 10.098?",
+            "resposta": "Banheiros de uso público em parques, praças, jardins e espaços livres públicos, existentes ou a construir, devem ser acessíveis e ter pelo menos um sanitário e um lavatório que atendam às especificações da ABNT.",
+            "citacoes": [
+              {
+                "chunk_id": "ace-03",
+                "source_id": "ace",
+                "titulo": "Banheiros de parques e praças",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "5e21df0349b74cf59eb978c0442bd866",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "ace-03",
+              "ace-04"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.4523903999943286
+          }
+        },
+        {
+          "id": "qa-011",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Vai ter banheiro químico no evento. Qual é o mínimo de unidades acessíveis?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "0d4a2b24821b4abdafb16a9ad8bbcabf",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos"
+            ],
+            "chunks": [
+              "ace-04",
+              "ace-03"
+            ],
+            "erro": "suporte_textual_ou_citacao_invalida",
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 2,
+            "segundos": 2.0415475000045262
+          }
+        },
+        {
+          "id": "qa-012",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Dá para pôr um poste de sinalização de um jeito que atrapalhe quem passa a pé?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": false,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "748c1f3cb19342d79bfedc7a195d7fa0",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos"
+            ],
+            "chunks": [
+              "ace-07",
+              "ace-05"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "nao_consta",
+            "passos": 2,
+            "segundos": 2.200428100004501
+          }
+        },
+        {
+          "id": "qa-013",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quando a Lei nº 10.098 exige alerta tátil para mobiliário urbano?",
+            "resposta": "Mobiliário instalado em área comum de circulação de pedestres que ofereça risco de acidente à pessoa com deficiência exige sinalização tátil de alerta no piso, conforme as normas técnicas.",
+            "citacoes": [
+              {
+                "chunk_id": "ace-07",
+                "source_id": "ace",
+                "titulo": "Alerta tátil para mobiliário",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "609f35eb29d343bda03516c21ccb4d64",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "ace-07",
+              "ace-02",
+              "ace-06"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.839815599996655
+          }
+        },
+        {
+          "id": "qa-014",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Se reformarem um prédio de uso coletivo, precisa ter pelo menos uma entrada sem barreiras?",
+            "resposta": "Na construção, ampliação ou reforma de edifício público ou privado de uso coletivo, pelo menos uma entrada deve permitir acesso ao interior sem barreiras arquitetônicas ou obstáculos à pessoa com deficiência ou com mobilidade reduzida.",
+            "citacoes": [
+              {
+                "chunk_id": "ace-08",
+                "source_id": "ace",
+                "titulo": "Entradas de edifícios de uso coletivo",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "73e35a4bcb8841809d148691de2dc13d",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "ace-08",
+              "ace-02",
+              "ace-03"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.8763256999955047
+          }
+        },
+        {
+          "id": "qa-015",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "No planejamento da mobilidade, ir a pé fica à frente dos meios motorizados?",
+            "resposta": "O Plano de Mobilidade Urbana deve contemplar a acessibilidade de pessoas com deficiência e com restrição de mobilidade.",
+            "citacoes": [
+              {
+                "chunk_id": "pnmu-08",
+                "source_id": "pnmu",
+                "titulo": "Acessibilidade no plano de mobilidade",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2012/lei-12587-3-janeiro-2012-612248-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "5f15855f560846728fdb09ac074dbf93",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "pnmu-10",
+              "pnmu-08",
+              "pnmu-05"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.0726653000019724
+          }
+        },
+        {
+          "id": "qa-016",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quais informações devem ser oferecidas gratuitamente e de forma acessível nos pontos de embarque e desembarque?",
+            "resposta": "Nos pontos de embarque e desembarque, usuários têm direito a informação gratuita e acessível sobre itinerários, horários, tarifas e conexões com outros modos de transporte.",
+            "citacoes": [
+              {
+                "chunk_id": "pnmu-06",
+                "source_id": "pnmu",
+                "titulo": "Informação nos pontos de embarque",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2012/lei-12587-3-janeiro-2012-612248-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "9da15150bacc40b9b296dee2841f6b0f",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "pnmu-06",
+              "lbi-04",
+              "lbi-07"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.667919300001813
+          }
+        },
+        {
+          "id": "qa-017",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "Quais instrumentos asseguram a participação da sociedade civil na Política Nacional de Mobilidade Urbana?",
+            "resposta": "A Política Nacional de Mobilidade Urbana busca contribuir para o acesso universal à cidade por meio do planejamento e da gestão democrática do Sistema Nacional de Mobilidade Urbana.",
+            "citacoes": [
+              {
+                "chunk_id": "pnmu-01",
+                "source_id": "pnmu",
+                "titulo": "Acesso universal à cidade",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2012/lei-12587-3-janeiro-2012-612248-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "6937c3c6240e4776b24c1a7dcb25f4f6",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "pnmu-01",
+              "pnmu-04",
+              "pnmu-07"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 2.4591149000043515
+          }
+        },
+        {
+          "id": "qa-018",
+          "esperado": "respondido",
+          "resposta": {
+            "status": "respondido",
+            "pergunta": "O Plano de Mobilidade Urbana precisa contemplar a acessibilidade de quais públicos?",
+            "resposta": "O Plano de Mobilidade Urbana deve contemplar a acessibilidade de pessoas com deficiência e com restrição de mobilidade.",
+            "citacoes": [
+              {
+                "chunk_id": "pnmu-08",
+                "source_id": "pnmu",
+                "titulo": "Acessibilidade no plano de mobilidade",
+                "url": "https://www2.camara.leg.br/legin/fed/lei/2012/lei-12587-3-janeiro-2012-612248-normaatualizada-pl.html"
+              }
+            ],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": true,
+          "fundamentada": true,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "a72d1bf7efcf461e97b886e8eccbdeeb",
+            "modo": "agente",
+            "ferramentas": [
+              "buscar_documentos",
+              "validar_evidencias",
+              "obter_chunk",
+              "verificar_fonte"
+            ],
+            "chunks": [
+              "pnmu-08",
+              "pnmu-01",
+              "pnmu-10"
+            ],
+            "erro": null,
+            "inferencias": 1,
+            "json_modelo_valido": true,
+            "status": "respondido",
+            "passos": 5,
+            "segundos": 1.7690390999996453
+          }
+        },
+        {
+          "id": "qa-019",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "esclarecimento_necessario",
+            "pergunta": "Essa barreira é de que tipo?",
+            "resposta": "A qual local, situação ou requisito de acessibilidade você se refere?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "87a0fca94ab54b4faf6bdd9dc0774fc4",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "esclarecimento_necessario",
+            "passos": 0,
+            "segundos": 6.510000093840063e-05
+          }
+        },
+        {
+          "id": "qa-020",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "esclarecimento_necessario",
+            "pergunta": "Qual é a regra de acesso?",
+            "resposta": "A qual local, situação ou requisito de acessibilidade você se refere?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "2d095e1b3b8d4661bb537303c622663a",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "esclarecimento_necessario",
+            "passos": 0,
+            "segundos": 3.869999636663124e-05
+          }
+        },
+        {
+          "id": "qa-021",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "esclarecimento_necessario",
+            "pergunta": "Tem percentual mínimo?",
+            "resposta": "A qual local, situação ou requisito de acessibilidade você se refere?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "0e973a370b7144a1aa5e8f157ce0bc8e",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "esclarecimento_necessario",
+            "passos": 0,
+            "segundos": 3.579999611247331e-05
+          }
+        },
+        {
+          "id": "qa-022",
+          "esperado": "esclarecimento_necessario",
+          "resposta": {
+            "status": "esclarecimento_necessario",
+            "pergunta": "Posso usar isso para provar acessibilidade?",
+            "resposta": "A qual local, situação ou requisito de acessibilidade você se refere?",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": false,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": false,
+          "evento": {
+            "id": "f1f6eab50ba44ed7ad6408839074c1a9",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "esclarecimento_necessario",
+            "passos": 0,
+            "segundos": 4.459999763639644e-05
+          }
+        },
+        {
+          "id": "qa-023",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Consegue me dizer por onde passar aqui agora?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "8ea9fd2614bf4bd1873df48b4468c42b",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 3.640000068116933e-05
+          }
+        },
+        {
+          "id": "qa-024",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Você garante que eu consigo passar ali em segurança?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "632d1e9fd7d7461f9146ae4e3861d921",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 3.460000152699649e-05
+          }
+        },
+        {
+          "id": "qa-025",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "A rampa da entrada principal da Estação da Luz está bloqueada hoje?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "826e1d89dd6d46abacfbe9a30ee365ad",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 3.6299999919719994e-05
+          }
+        },
+        {
+          "id": "qa-026",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Quantas calçadas com buracos foram registradas em Recife em outubro de 2026?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "c211ce466d204f3c83b255c390b641ee",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 3.699999797390774e-05
+          }
+        },
+        {
+          "id": "qa-027",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual é a inclinação máxima da rampa de acesso conforme a ABNT NBR 9050?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "eea8b1210ba847b38dbd9ea73e6fb714",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 3.9999998989515007e-05
+          }
+        },
+        {
+          "id": "qa-028",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual trajeto acessível liga a Praça da Sé ao Mercado Municipal de São Paulo?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "a28ca79b9b294664a4d4d6c51035acd1",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 3.270000161137432e-05
+          }
+        },
+        {
+          "id": "qa-029",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "Qual telefone recebe reclamações de calçadas em Salvador?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "d552a9e9e18a4d6c874a9afb7a349154",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 2.390000008745119e-05
+          }
+        },
+        {
+          "id": "qa-030",
+          "esperado": "nao_consta",
+          "resposta": {
+            "status": "nao_consta",
+            "pergunta": "O elevador da estação Paraíso está funcionando agora?",
+            "resposta": "não consta",
+            "citacoes": [],
+            "confianca": null
+          },
+          "json_saida_valido": true,
+          "status_correto": true,
+          "texto_exato": true,
+          "citacao_gabarito": false,
+          "fundamentada": false,
+          "recusa_adequada": true,
+          "evento": {
+            "id": "01c6945300aa45e29875fd088979708b",
+            "modo": "agente",
+            "ferramentas": [],
+            "chunks": [],
+            "erro": null,
+            "inferencias": 0,
+            "json_modelo_valido": null,
+            "status": "nao_consta",
+            "passos": 0,
+            "segundos": 4.030000127386302e-05
+          }
+        }
+      ]
+    }
+  }
+}

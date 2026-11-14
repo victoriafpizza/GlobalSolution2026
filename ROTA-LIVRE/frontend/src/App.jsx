@@ -5,6 +5,7 @@ import { Icon } from 'leaflet'
 import { MapPin, Accessibility, AlertTriangle } from 'lucide-react'
 
 import 'leaflet/dist/leaflet.css'
+import Assistente from './Assistente'
 import './App.css'
 
 // Configuração dos marcadores do mapa
@@ -191,6 +192,7 @@ function App() {
               ))}
           </MapContainer>
         </section>
+        {import.meta.env.VITE_AI_LOCAL === '1' && <Assistente />}
       </main>
 
       {/* Rodapé */}

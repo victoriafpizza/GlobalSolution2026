@@ -1,0 +1,70 @@
+[
+  {
+    "modo": "rag",
+    "http": 200,
+    "status": "respondido",
+    "pergunta": "Em que espaços podem existir barreiras urbanísticas?",
+    "resposta": "As barreiras urbanísticas são aquelas em vias e em espaços públicos ou privados abertos ao público ou de uso coletivo.",
+    "citacoes": [
+      {
+        "chunk_id": "lbi-02",
+        "source_id": "lbi",
+        "titulo": "Barreiras urbanísticas",
+        "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+      }
+    ],
+    "confianca": null
+  },
+  {
+    "modo": "rag",
+    "http": 200,
+    "status": "nao_consta",
+    "pergunta": "O elevador da estação Paraíso está funcionando agora?",
+    "resposta": "não consta",
+    "citacoes": [],
+    "confianca": null
+  },
+  {
+    "modo": "rag",
+    "http": 200,
+    "status": "esclarecimento_necessario",
+    "pergunta": "Tem percentual mínimo?",
+    "resposta": "Percentual mínimo de qual item, como vagas ou banheiros químicos?",
+    "citacoes": [],
+    "confianca": null
+  },
+  {
+    "modo": "agente",
+    "http": 200,
+    "status": "respondido",
+    "pergunta": "Em que espaços podem existir barreiras urbanísticas?",
+    "resposta": "As barreiras urbanísticas são aquelas em vias e em espaços públicos ou privados abertos ao público ou de uso coletivo.",
+    "citacoes": [
+      {
+        "chunk_id": "lbi-02",
+        "source_id": "lbi",
+        "titulo": "Barreiras urbanísticas",
+        "url": "https://www2.camara.leg.br/legin/fed/lei/2015/lei-13146-6-julho-2015-781174-normaatualizada-pl.pdf"
+      }
+    ],
+    "confianca": null
+  },
+  {
+    "modo": "agente",
+    "http": 200,
+    "status": "nao_consta",
+    "pergunta": "O elevador da estação Paraíso está funcionando agora?",
+    "resposta": "não consta",
+    "citacoes": [],
+    "confianca": null
+  },
+  {
+    "modo": "agente",
+    "http": 200,
+    "status": "esclarecimento_necessario",
+    "pergunta": "Tem percentual mínimo?",
+    "resposta": "Percentual mínimo de qual item, como vagas ou banheiros químicos?",
+    "citacoes": [],
+    "confianca": null
+  }
+]

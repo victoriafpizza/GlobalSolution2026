@@ -1,0 +1,126 @@
+[
+  {
+    "modo": "rag",
+    "caso": "res-01",
+    "acerto": true,
+    "resposta": {
+      "status": "respondido",
+      "pergunta": "Em quais vias o semáforo de pedestres deve obrigatoriamente ter aviso sonoro suave?",
+      "resposta": "Quando fluxo e risco exigirem, semáforos de pedestres devem oferecer sinal sonoro suave, intermitente e sem estridência ou mecanismo alternativo para orientar pessoas com deficiência visual. Em vias públicas de grande circulação ou de acesso a serviços de reabilitação, o sinal sonoro suave é obrigatório.",
+      "citacoes": [
+        {
+          "chunk_id": "ace-06",
+          "source_id": "ace",
+          "titulo": "Sinal sonoro em travessias",
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+        }
+      ],
+      "confianca": null
+    }
+  },
+  {
+    "modo": "rag",
+    "caso": "res-02",
+    "acerto": true,
+    "resposta": {
+      "status": "respondido",
+      "pergunta": "Um centro comercial tem obrigação de oferecer cadeira de rodas para clientes com mobilidade reduzida?",
+      "resposta": "Centros comerciais e estabelecimentos semelhantes devem fornecer carros e cadeiras de rodas, motorizados ou não, para atender pessoas com deficiência ou com mobilidade reduzida.",
+      "citacoes": [
+        {
+          "chunk_id": "ace-09",
+          "source_id": "ace",
+          "titulo": "Cadeiras de rodas em centros comerciais",
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+        }
+      ],
+      "confianca": null
+    }
+  },
+  {
+    "modo": "rag",
+    "caso": "res-03",
+    "acerto": true,
+    "resposta": {
+      "status": "nao_consta",
+      "pergunta": "Quantos quilômetros de calçada acessível existem no município de Curitiba?",
+      "resposta": "não consta",
+      "citacoes": [],
+      "confianca": null
+    }
+  },
+  {
+    "modo": "rag",
+    "caso": "res-04",
+    "acerto": true,
+    "resposta": {
+      "status": "esclarecimento_necessario",
+      "pergunta": "Existe percentual mínimo?",
+      "resposta": "Percentual mínimo de qual item, como vagas ou banheiros químicos?",
+      "citacoes": [],
+      "confianca": null
+    }
+  },
+  {
+    "modo": "agente",
+    "caso": "res-01",
+    "acerto": true,
+    "resposta": {
+      "status": "respondido",
+      "pergunta": "Em quais vias o semáforo de pedestres deve obrigatoriamente ter aviso sonoro suave?",
+      "resposta": "Quando fluxo e risco exigirem, semáforos de pedestres devem oferecer sinal sonoro suave, intermitente e sem estridência ou mecanismo alternativo para orientar pessoas com deficiência visual. Em vias públicas de grande circulação ou de acesso a serviços de reabilitação, o sinal sonoro suave é obrigatório.",
+      "citacoes": [
+        {
+          "chunk_id": "ace-06",
+          "source_id": "ace",
+          "titulo": "Sinal sonoro em travessias",
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+        }
+      ],
+      "confianca": null
+    }
+  },
+  {
+    "modo": "agente",
+    "caso": "res-02",
+    "acerto": true,
+    "resposta": {
+      "status": "respondido",
+      "pergunta": "Um centro comercial tem obrigação de oferecer cadeira de rodas para clientes com mobilidade reduzida?",
+      "resposta": "Centros comerciais e estabelecimentos semelhantes devem fornecer carros e cadeiras de rodas, motorizados ou não, para atender pessoas com deficiência ou com mobilidade reduzida.",
+      "citacoes": [
+        {
+          "chunk_id": "ace-09",
+          "source_id": "ace",
+          "titulo": "Cadeiras de rodas em centros comerciais",
+          "url": "https://www2.camara.leg.br/legin/fed/lei/2000/lei-10098-19-dezembro-2000-377651-normaatualizada-pl.html"
+        }
+      ],
+      "confianca": null
+    }
+  },
+  {
+    "modo": "agente",
+    "caso": "res-03",
+    "acerto": true,
+    "resposta": {
+      "status": "nao_consta",
+      "pergunta": "Quantos quilômetros de calçada acessível existem no município de Curitiba?",
+      "resposta": "não consta",
+      "citacoes": [],
+      "confianca": null
+    }
+  },
+  {
+    "modo": "agente",
+    "caso": "res-04",
+    "acerto": true,
+    "resposta": {
+      "status": "esclarecimento_necessario",
+      "pergunta": "Existe percentual mínimo?",
+      "resposta": "Percentual mínimo de qual item, como vagas ou banheiros químicos?",
+      "citacoes": [],
+      "confianca": null
+    }
+  }
+]
